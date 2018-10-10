@@ -20,24 +20,35 @@ class SessionForm extends React.Component {
     );
   }
 
+  renderErrors(){
+    return (
+      <ul>
+          {this.props.errors.map( error => <li>{error}</li>)}
+      </ul>
+    );
+  }
+
   render(){
 
     return (
-      <div>
-        <form onSubmit={handleSubmit}>
-          <header>Please {this.formType} or </header>
-          <label>Email
+      <div className="session-form">
+        <h1>Skip the hotel hussle, book a stay on a private boat!</h1>
+        <form onSubmit={this.handleSubmit}>
+          <br/>
+          <br/>
             <input
               type="text"
               value={this.state.email}
-              onChange={updateForm('email')} />
-          </label>
-          <label>Password
+              onChange={this.updateForm('email')}
+              placeholder="Email"/>
+            <br/>
+            <br/>
             <input
               type="password"
               value={this.state.password}
-              onChange={updateForm('password')} />
-          </label>
+              onChange={this.updateForm('password')}
+              placeholder="Password"/>
+            <br/>
           <input type="submit" value={this.props.formType} />
         </form>
       </div>
@@ -45,3 +56,5 @@ class SessionForm extends React.Component {
     );
   }
 }
+
+export default withRouter(SessionForm);

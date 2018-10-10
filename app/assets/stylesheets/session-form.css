@@ -1,0 +1,26 @@
+.session-form {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  top: 300px;
+  left: 40%;
+  right: 50%;
+  background-color: white;
+  width: 350px;
+  height: 400px;
+  z-index: 3;
+  border: 1px solid lightgrey;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  padding: 20px;
+}
+
+.session-form > h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.session-form input {
+  width: 75%;
+  padding-left: 10px;
+  padding-right: 10px;
+}

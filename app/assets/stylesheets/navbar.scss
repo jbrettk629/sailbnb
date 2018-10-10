@@ -1,0 +1,41 @@
+header {
+
+}
+
+.navbar {
+  background-color: white;
+  border: 2px solid lightgrey;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  font-family: Helvetica;
+}
+
+.logo {
+  display: flex;
+  padding: 15px;
+  background-image: image_url('sailbnb-logo');
+  // object-fit: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  vertical-align: center;
+}
+
+.nav-links > a {
+  color: darkgrey;
+  padding: 15px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  font-size: 12px;
+  align-content: center;
+  padding-bottom: 10px;
+
+}
