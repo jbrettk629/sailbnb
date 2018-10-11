@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { openModal } from '../../actions /modal_actions';
 
-const Greeting = ({ currentUser, logout }) => {
+const NavBar = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <div className='navbar'>
         <div className='logo'>
         </div>
         <div className="nav-links">
-          <Link to="/signup">Sign up</Link>
+          <button onClick={() => openModal('login')}>Log In</button>
           <br/>
-          <Link to="/login">Log in</Link>
+          <button onClick={() => openModal('signup')}>Sign Up</button>
         </div>
     </div>
   )
@@ -28,4 +29,10 @@ const Greeting = ({ currentUser, logout }) => {
   return currentUser ? signedIn() : sessionLinks();
 };
 
-export default Greeting;
+export default NavBar;
+
+
+
+// <Link to="/signup">Sign up</Link>
+
+// <Link to="/login">Log in</Link>

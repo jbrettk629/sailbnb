@@ -1,23 +1,27 @@
 header {
 
 }
-
+//need fixed positioning and no background
 .navbar {
-  background-color: white;
-  border: 2px solid lightgrey;
+  position: fixed;
+  background: none;
   display: flex;
   justify-content: space-between;
   height: 60px;
   font-family: Helvetica;
+  width: 100%;
 }
 
 .logo {
   display: flex;
-  padding: 15px;
-  background-image: image_url('sailbnb-logo');
+  background-image: image_url('white_sailboat_logo');
   // object-fit: cover;
   background-size: contain;
   background-repeat: no-repeat;
+  border: 10px;
+  height: 30px;
+  width:30px;
+  margin: 10px;
 }
 
 .nav-links {
@@ -27,8 +31,10 @@ header {
   vertical-align: center;
 }
 
-.nav-links > a {
-  color: darkgrey;
+.nav-links > button {
+  background: none;
+  border: none;
+  color: white;
   padding: 15px;
   text-decoration: none;
   display: flex;

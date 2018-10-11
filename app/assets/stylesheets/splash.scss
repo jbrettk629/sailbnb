@@ -1,0 +1,19 @@
+.splash {
+  // background-image: image_url('blue-sky-boat-greece');
+  // overflow: hidden;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+
+}
+
+#splash-photo {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: -200px;
+
+}
