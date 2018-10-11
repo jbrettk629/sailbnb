@@ -21,6 +21,7 @@
    font: inherit;
    vertical-align: baseline;
    list-style: none;
+   font-family: Helvetica;
  }
 
  general-body {
@@ -30,4 +31,13 @@
 
 header {
   background: none;
+}
+
+link, button {
+  cursor: pointer;
+}
+
+.blue-link {
+  border: none
+  color: rgb(0, 132, 137);
 }

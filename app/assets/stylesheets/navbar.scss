@@ -7,41 +7,49 @@ header {
   background: none;
   display: flex;
   justify-content: space-between;
-  height: 60px;
-  font-family: Helvetica;
+  vertical-align: center;
+  height: 80px;
   width: 100%;
 }
 
 .logo {
   display: flex;
-  background-image: image_url('white_sailboat_logo');
-  // object-fit: cover;
-  background-size: contain;
-  background-repeat: no-repeat;
+  // background-image: image_url('white_sailboat_logo');
+  // // object-fit: cover;
+  // background-size: contain;
+  // background-repeat: no-repeat;
   border: 10px;
-  height: 30px;
-  width:30px;
-  margin: 10px;
+  height: 50px;
+  width:50px;
+  margin: 20px;
+}
+
+#logo {
+  height: 50px;
+  width: 50px;
 }
 
 .nav-links {
   display: flex;
   justify-content: center;
-  padding: 10px;
   vertical-align: center;
+  padding-right: 20px;
 }
 
 .nav-links > button {
   background: none;
   border: none;
   color: white;
-  padding: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 80px;
+  width: 80px;
   text-decoration: none;
   display: flex;
   justify-content: center;
   vertical-align: center;
-  font-size: 12px;
+  font-size: 16px;
   align-content: center;
-  padding-bottom: 10px;
-
 }

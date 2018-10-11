@@ -7,8 +7,8 @@
   left: 40%;
   right: 50%;
   background-color: white;
-  width: 350px;
-  height: 400px;
+  width: 600px;
+  height: 700px;
   z-index: 3;
   border: 1px solid lightgrey;
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
@@ -28,4 +28,43 @@
   width: 95%;
   padding-left: 10px;
   padding-right: 10px;
+  font-size: 20px;
+  font-weight: 100;
+  height: 50px;
+}
+
+.blue-link {
+  border: none;
+  font-size: 14px;
+  color: blue;
+}
+
+#demo {
+  width: 95%;
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: rgb(255, 90, 95);
+  font-size: 18px;
+  font-weight: 250;
+  color: white;
+}
+
+.session-input-field {
+  height: 45px;
+  background: white;
+}
+
+.close-x {
+  padding: 30px;
+  font-size: 30px;
+  font-weight: 100;
+  fill: rbg(118,118,118);
+  color; lightgrey;
+}
+
+.errors {
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 250;
 }
