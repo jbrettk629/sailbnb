@@ -1,8 +1,9 @@
 
-export const fetchBoats = () => {
+export const fetchBoats = (bounds) => {
   return $.ajax({
     method: 'GET',
-    url: 'api/boats'
+    url: 'api/boats',
+    bounds
   });
 };
 
@@ -13,7 +14,7 @@ export const fetchBoat = (id) => {
   });
 };
 
-export const createBoats = (boat) => {
+export const createBoat = (boat) => {
   return $.ajax({
     method: 'GET',
     url: 'api/boats',

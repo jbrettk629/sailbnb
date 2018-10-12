@@ -1,5 +1,6 @@
 import React from 'react';
-import MarkManager from '../../util/marker_manager';
+import MarkerManager from '../../util/marker_manager';
+import { withRouter } from 'react-router-dom';
 
 
 class BoatMap extends React.Component {
@@ -9,12 +10,23 @@ class BoatMap extends React.Component {
       zoom: 13
     };
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    this.MarkManager = new MarkManager(this.map);
+    this.MarkerManager = new MarkerManager(this.map);
 
+    // google.maps.event.addListener(this.map, 'idle', () => {
+    //   const { north, south, east, west } = this.map.getBounds().toJSON();
+    //   const bounds = {
+    //     northEast: { lat: north, lng: east },
+    //     southWest: { lat: south, lng: west }
+    //   };
+    //   this.props.updateBounds('bounds', bounds);
+    // });
+    console.log("new props", this.props)
+    this.MarkerManager.updateMarkers(this.props.boats);
   }
 
   componentDidUpdate(){
-    this.MarkManager.updateMarkers();
+    console.log("new props", this.props)
+    this.MarkerManager.updateMarkers(this.props.boats);
   }
 
   render() {

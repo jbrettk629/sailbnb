@@ -9,7 +9,7 @@ class Api::BoatsController < ApplicationController
       render json: @boat.errors.full_messages, status: 400
     end
   end
-  
+
 
   def show
     @boat = Boat.find(params[:id])
@@ -17,14 +17,16 @@ class Api::BoatsController < ApplicationController
   end
 
   def index
-    @boats = Boat.all
+    @boats = Boat.in_bounds(params[:bounds])
+
+    # @boats = Boat.all
     render :index
   end
 
   private
 
   def boat_params
-    params.require(:boat).permit(:owner_id, :title, :description, :lat, :lgn, :location, :rate, :guests, :bedrooms, :beds, :baths)
+    params.require(:boat).permit(:owner_id, :title, :description, :lat, :lng, :location, :rate, :guests, :bedrooms, :beds, :baths)
   end
 
 end

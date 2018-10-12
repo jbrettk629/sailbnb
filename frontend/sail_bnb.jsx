@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.fetchBoat = BoatAction.fetchBoat;
   window.fetchBoats = BoatAction.fetchBoats;
-  window.createBoat = BoatAction.createBoat;
+
   window.fetchBoatsUtil = BoatApiUtil.fetchBoats;
   window.dispatch = store.dispatch;
 

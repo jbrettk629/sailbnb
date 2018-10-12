@@ -11,9 +11,7 @@ class BoatIndex extends React.Component {
 
     const boats = this.props.boats.map( boat => {
       return (
-        <ul>
           <BoatIndexItem key={boat.id} boat={boat} />
-        </ul>
       );
     });
 
