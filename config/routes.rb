@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     #   resources :bookings, only: [:index]
     # end
 
-    # resources :boats, only: [:show, :index] do
+    resources :boats, only: [:create, :show, :index]
     #   resources :bookings, only: [:index]
     #   resources :reviews [:create, :show, :index, :destroy]
     # end

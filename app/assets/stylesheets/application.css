@@ -25,7 +25,8 @@
  }
 
  general-body {
-   display: flex;
+   /* display: flex;
+   flex-direction: column; */
  }
 
 
@@ -40,4 +41,12 @@ link, button {
 .blue-link {
   border: none
   color: rgb(0, 132, 137);
+}
+
+.boats-index-with-map {
+
+}
+
+.boats-index {
+  margin-top: 80px;
 }

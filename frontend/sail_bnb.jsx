@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
-import { login } from './actions/session_actions';
+
+import * as BoatAction from './actions/boat_actions';
+import * as BoatApiUtil from './util/boats_api_util';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -21,6 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
 
+  window.getState = store.getState;
+  window.fetchBoat = BoatAction.fetchBoat;
+  window.fetchBoats = BoatAction.fetchBoats;
+  window.createBoat = BoatAction.createBoat;
+  window.fetchBoatsUtil = BoatApiUtil.fetchBoats;
+  window.dispatch = store.dispatch;
 
   const root = document.getElementById('root');
 
@@ -31,6 +40,4 @@ document.addEventListener('DOMContentLoaded', () => {
 // <h1>Its Working!</h1>
 // const store = configureStore();
 //
-// window.getState = store.getState;
-// window.dispatch = store.dispatch;
 // window.login = login;

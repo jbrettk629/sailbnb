@@ -1,9 +1,14 @@
 header {
 
 }
+
+.white-nav-bar {
+  border: 2px solid lightgray;
+}
 //need fixed positioning and no background
 .navbar {
   position: fixed;
+  top: 0;
   background: none;
   display: flex;
   justify-content: space-between;
