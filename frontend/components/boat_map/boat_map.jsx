@@ -20,12 +20,12 @@ class BoatMap extends React.Component {
 //     //   };
 //     //   this.props.updateBounds('bounds', bounds);
 //     // });
-    console.log("old props", this.props);
+    // console.log("old props", this.props);
     this.MarkerManager.updateMarkers(this.props.boats);
   }
 //
   componentDidUpdate(){
-    console.log("new props", this.props);
+    // console.log("new props", this.props);
     this.MarkerManager.updateMarkers(this.props.boats);
   }
 //

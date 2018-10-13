@@ -20,7 +20,6 @@ const receiveErrors = errors => ({
 });
 
 export const fetchBoats = () => dispatch => {
-  console.log('in fetchboats')
   return (
     BoatsApiUtil.fetchBoats().then( boats => dispatch(receiveAllBoats(boats)))
   );
