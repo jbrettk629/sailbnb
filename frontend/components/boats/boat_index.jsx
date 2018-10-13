@@ -16,10 +16,8 @@ class BoatIndex extends React.Component {
     });
 
     return (
-      <div>
-        <ul>
-          { boats }
-        </ul>
+      <div className="boat-index">
+        { boats }
       </div>
 
 

@@ -1,0 +1,72 @@
+.boat-index {
+  float: left;
+  width: 50%
+}
+
+.boat-index-item {
+  display: flex;
+  height: 175px;
+  border: 1px solid gray;
+  margin: 10px;
+}
+
+.boat-index-picture {
+  width: 30%;
+  height: 175px;
+  float: left;
+}
+
+.boat-index-info {
+  display: flex;
+  width: 70%;
+  float: left;
+}
+
+.boat-index-middle-info {
+  width: 65%;
+  height: 175px;
+  float: left;
+}
+.boat-index-middle-info > h2 {
+  font-weight: 500;
+  font-size: 18px;
+  color: grey;
+  font-family: Helvetica;
+  line-height: 25px;
+  margin-top: 10px;
+}
+
+.boat-index-middle-info > h3 {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.boat-index-right-info {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 175px;
+  float: left;
+  border-left: 1px solid lightgrey;
+}
+
+.specifics {
+  font-size: 12px;
+}
+
+.per-night {
+  font-size: 12px;
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+.boat-index-price > .rate {
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.boat-rating {
+  margin-top: 10px;
+  margin-left: 10px;
+}

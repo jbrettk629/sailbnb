@@ -4,9 +4,9 @@ import BoatIndex from '../boats/boat_index';
 //
 // const Search = ({boats, fetchBoats, updateBounds}) => (
 const Search = ({boats, fetchBoats}) => (
-      <div>
-        <BoatMap boats={boats} /> 
+      <div className="boat-index-2">
         <BoatIndex boats={boats} fetchBoats={fetchBoats} />
+        <BoatMap boats={boats} />
       </div>
 );
 //

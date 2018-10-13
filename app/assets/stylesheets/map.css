@@ -1,6 +1,9 @@
 
 #map-container {
-  width: 500px;
+  margin: 10px;
+  float: left;
+  width: 45%;
   height: 500px;
   background-color: yellow;
+  position: fixed;
 }
