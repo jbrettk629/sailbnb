@@ -5,26 +5,27 @@ import Modal from './modal/modal';
 import NavBarContainer from './navbar/navbar_container';
 import SplashContainer from './splash/splash_container';
 import SearchContainer from './search/search_container';
+// import BoatsContainer from './boats/boats_container';
 
 
 const App = () => (
   <div className="general-body">
-    
+
     <Modal />
 
-    <div className="navbar">
-      <NavBarContainer/>
-    </div>
+    // <div className="navbar">
+    <NavBarContainer/>
+    // </div>
 
-    <div className="splash-page">
-      <Route exact path='/' component={SplashContainer} />
-    </div>
+    // <div className="splash-page">
+    <Route exact path='/' component={SplashContainer} />
+    // </div>
 
-    <div className='boats-index-with-map'>
-      <div className='boats-index'>
-        <Route path='/boats' component={SearchContainer}/>
-      </div>
-    </div>
+    // <div className='boats-index-with-map'>
+      // <div className='boats-index'>
+    <Route path='/boats' component={SearchContainer} />
+      // </div>
+    // </div>
 
   </div>
 );

@@ -17,9 +17,9 @@ class Api::BoatsController < ApplicationController
   end
 
   def index
-    @boats = Boat.in_bounds(params[:bounds])
+    # @boats = Boat.in_bounds(params[:bounds])
 
-    # @boats = Boat.all
+    @boats = Boat.all
     render :index
   end
 

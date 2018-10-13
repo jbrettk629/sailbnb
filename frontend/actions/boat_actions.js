@@ -19,10 +19,10 @@ const receiveErrors = errors => ({
   errors
 });
 
-export const fetchBoats = (bounds) => dispatch => {
-
+export const fetchBoats = () => dispatch => {
+  console.log('in fetchboats')
   return (
-    BoatsApiUtil.fetchBoats(bounds).then( boats => dispatch(receiveAllBoats(boats)))
+    BoatsApiUtil.fetchBoats().then( boats => dispatch(receiveAllBoats(boats)))
   );
 };
 
