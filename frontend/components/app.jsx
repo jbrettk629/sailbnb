@@ -6,6 +6,7 @@ import NavBarContainer from './navbar/navbar_container';
 import OtherNavBarContainer from './navbar/other_navbar_container';
 import SplashContainer from './splash/splash_container';
 import SearchContainer from './search/search_container';
+import BoatShowContainer from './boat_show/boat_show_container';
 // import BoatsContainer from './boats/boats_container';
 
 
@@ -14,19 +15,19 @@ const App = () => (
 
     <Modal />
 
-    <div className="navbar">
+    <header className="navbar">
       <Route exact path='/' component={NavBarContainer}></Route>
       <Route path='/boats' component={OtherNavBarContainer}></Route>
-    </div>
+    </header>
 
     <div className="splash-page">
       <Route exact path='/' component={SplashContainer} />
     </div>
+    <Route path='/boats/:boatId' component={BoatShowContainer} />
 
     <div className='boats-index-with-map'>
-        <Route path='/boats' component={SearchContainer} />
+        <Route exact path='/boats' component={SearchContainer} />
     </div>
-
   </div>
 );
 

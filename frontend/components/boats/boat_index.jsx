@@ -1,5 +1,6 @@
 import React from 'react';
 import BoatIndexItem from './boat_index_item';
+import { withRouter } from 'react-router-dom';
 
 class BoatIndex extends React.Component {
 

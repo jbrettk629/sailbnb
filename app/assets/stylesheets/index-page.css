@@ -3,6 +3,10 @@
   width: 50%
 }
 
+.boat-show-link {
+  text-decoration: none;
+}
+
 .boat-index-item {
   display: flex;
   height: 175px;
