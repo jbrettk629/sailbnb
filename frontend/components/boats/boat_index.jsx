@@ -20,9 +20,6 @@ class BoatIndex extends React.Component {
       <div className="boat-index">
         { boats }
       </div>
-
-
-
     );
   }
 }

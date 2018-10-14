@@ -25,10 +25,11 @@ export const fetchBoats = () => dispatch => {
   );
 };
 
-export const fetchBoat = (id) => dispatch => (
+export const fetchBoat = (id) => dispatch => {
+  return (
   BoatsApiUtil.fetchBoat(id).then(boat => dispatch(receiveBoat(boat)))
-);
-
+  );
+};
 export const createBoat = (boat) => dispatch => {
 
   return (

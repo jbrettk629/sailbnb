@@ -1,26 +1,55 @@
 import React from 'react';
 
 
-const BoatShow = ({ boatId, boat, fetchBoat}) => {
+class BoatShow extends React.Component {
+
+  componentDidMount(){
+    this.props.fetchBoat(this.props.boatId);
+  }
 
 
-debugger
-  return (
 
-    <div className="boat-show-page">
-      <div className="boat-show-images">
-        <p>Boat Show Pictures</p>
+  render(){
+    if (this.props.boat === undefined) return '';
+    return (
+
+      <div className="boat-show-page">
+        <div className="boat-show-images">
+          <div className="boat-show-pic-left" >
+            <p>Main Picture</p>
+          </div>
+          <div className="boat-show-pics-right">
+            <div className="boat-show-pics-right-top">
+              <div className="boat-show-pics">
+                <p>Smaller Pictures</p>
+              </div>
+              <div className="boat-show-pics">
+                <p>Smaller Pictures</p>
+              </div>
+            </div>
+            <div className="boat-show-pics-right-bottom">
+              <div className="boat-show-pics">
+                <p>Smaller Pictures</p>
+              </div>
+              <div className="boat-show-pics">
+                <p>Smaller Pictures</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="boat-show-bottom">
+          <div className="boat-show-info">
+            <p>{this.props.boat.title}</p>
+            <p>{this.props.boat.description}</p>
+            <p>Boat Show Reviews</p>
+          </div>
+          <div className="boat-booking">
+            <p>Boat Booking</p>
+          </div>
+        </div>
       </div>
-      <div className="boat-show-info">
-        <p>Boat title</p>
-        <p>Boat Description</p>
-        <p>Boat Show Reviews</p>
-      </div>
-      <div className="boat-booking">
-        <p>Boat Booking</p>
-      </div>
-    </div>
-  )
+    );
+  }
 }
 
-export default BoatShow
+export default BoatShow;
