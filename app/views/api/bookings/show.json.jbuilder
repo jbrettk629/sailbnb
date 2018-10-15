@@ -1,1 +1,1 @@
-json.extract! @booking, :id, :boat_id, :owner_id, :guests, :checkin, :checkout
+json.extract! @booking, :id, :boat_id, :user_id, :guests, :checkin, :checkout

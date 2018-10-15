@@ -6,7 +6,7 @@ class Api::BookingsController < ApplicationController
     @booking.user_id = current_user.id
 
     if @booking.save!
-      render 'api/boats/show'
+      render 'api/bookings/show'
     else
       render json: @booking.errors.full_messages, status: 422
     end
