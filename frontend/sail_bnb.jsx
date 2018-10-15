@@ -5,6 +5,7 @@ import configureStore from './store/store';
 
 import * as BoatAction from './actions/boat_actions';
 import * as BoatApiUtil from './util/boats_api_util';
+import * as BookingsApiUtil from './util/bookings_api_util';
 
 
 
@@ -25,11 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   window.getState = store.getState;
+  window.dispatch = store.dispatch;
+
   window.fetchBoat = BoatAction.fetchBoat;
   window.fetchBoats = BoatAction.fetchBoats;
-
   window.fetchBoatsUtil = BoatApiUtil.fetchBoats;
-  window.dispatch = store.dispatch;
+  window.fetchBookings = BookingsApiUtil.fetchBookings;
+  window.fetchBooking = BookingsApiUtil.fetchBooking;
+  window.createBooking = BookingsApiUtil.createBooking;
+
 
   const root = document.getElementById('root');
 
