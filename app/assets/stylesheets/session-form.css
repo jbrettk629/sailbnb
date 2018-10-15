@@ -65,6 +65,8 @@
 
 .errors-div {
   align-items: center;
+  height: auto;
+  width: 95%;
   /* padding-top: 20px; */
 
 

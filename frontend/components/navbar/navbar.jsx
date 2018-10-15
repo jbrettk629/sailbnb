@@ -19,7 +19,7 @@ const NavBar = ({ currentUser, logout, openModal }) => {
   const signedIn = () => (
     <div className='navbar'>
         <div className='logo'>
-          <Link to='/'>Link</Link>
+          <Link to='/'><img id='logo' src='/assets/white_sailboat_logo'/></Link>
         </div>
         <div className="nav-links">
           <h3>Hi, {currentUser.name}</h3>
