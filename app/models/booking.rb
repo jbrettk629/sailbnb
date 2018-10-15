@@ -7,7 +7,6 @@ class Booking < ApplicationRecord
   belongs_to :boat
 
   def checkin_before_checkout
-    debugger
     if checkout < checkin
        errors[:booking] << 'checkout date must be after checkin date'
        # render json: ["checkout date must be after checkin date"], status: 404
@@ -15,7 +14,6 @@ class Booking < ApplicationRecord
   end
 
   def overlapping_bookings
-    debugger
     Booking
       .where(boat_id: boat_id)
       .where.not('checkin > :checkout OR checkout < :checkin',
