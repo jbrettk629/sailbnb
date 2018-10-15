@@ -5,7 +5,7 @@ class BookingForm extends React.Component {
   constructor(props){
     super(props);
     debugger
-    this.state = { boat_id: 1, checkin: '', checkout: '', guests: 1};
+    this.state = { boat_id: '', checkin: '', checkout: '', guests: 1};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
