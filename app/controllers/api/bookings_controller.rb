@@ -4,9 +4,11 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     debugger
     @boat = Boat.find(params[:boat_id])
-    @booking.boat_id = @boat.id
+    debugger
+    @booking.boat_id ||= @boat.id
+    debugger
     @booking.user_id ||= current_user.id
-
+    debugger
     if @booking.save!
       render 'api/bookings/show'
     else

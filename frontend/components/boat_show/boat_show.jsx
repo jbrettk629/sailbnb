@@ -1,10 +1,13 @@
 import React from 'react';
+import BookingFormContainer from './booking_form_container';
 
 
 class BoatShow extends React.Component {
 
   componentDidMount(){
+    debugger
     this.props.fetchBoat(this.props.boatId);
+    this.props.fetchBookings(this.props.boatId);
   }
 
 
@@ -44,7 +47,7 @@ class BoatShow extends React.Component {
             <p>Boat Show Reviews</p>
           </div>
           <div className="boat-booking">
-            <p>Boat Booking</p>
+            <BookingFormContainer />
           </div>
         </div>
       </div>

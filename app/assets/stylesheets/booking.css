@@ -1,0 +1,23 @@
+.booking-object {
+  border: 1px solid red;
+}
+
+.boat-booking-info {
+  border: 1px solid red;
+}
+
+.booking-form {
+  border: 1px solid red;
+}
+
+.booking-fields {
+  border: 1px solid red;
+}
+
+.booking-fields > label {
+  border: 1px solid red;
+}
+
+.booking-fields > input {
+  border: 1px solid red;
+}
