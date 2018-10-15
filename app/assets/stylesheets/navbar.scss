@@ -54,6 +54,18 @@ header {
   padding-right: 20px;
 }
 
+.nav-links > h3 {
+  padding-top: 31px;
+  padding-right: 10px;
+  color: white;
+}
+
+.other-nav-links > h3 {
+  padding-top: 31px;
+  padding-right: 10px;
+  color: red;
+}
+
 .other-nav-links {
   display: flex;
   justify-content: center;

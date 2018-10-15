@@ -63,8 +63,14 @@
   color: lightgrey;
 }
 
-.errors {
-  padding-top: 20px;
+.errors-div {
+  align-items: center;
+  /* padding-top: 20px; */
+
+
+}
+.errors-li {
+  color: red;
   font-size: 18px;
   font-weight: 250;
 }
