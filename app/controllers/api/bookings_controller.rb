@@ -2,8 +2,10 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.boat_id ||= params[:boat_id]
-    @booking.user_id = current_user.id
+    debugger
+    @boat = Boat.find(params[:boat_id])
+    @booking.boat_id = @boat.id
+    @booking.user_id ||= current_user.id
 
     if @booking.save!
       render 'api/bookings/show'
@@ -18,7 +20,8 @@ class Api::BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.all
+    @boat = Boat.find(params[:boat_id])
+    @bookings = @boat.bookings
     render :index
   end
 
