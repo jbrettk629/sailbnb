@@ -2,7 +2,7 @@ import * as BoatsApiUtil from '../util/boats_api_util';
 
 export const RECEIVE_ALL_BOATS = 'RECEIVE_ALL_BOATS';
 export const RECEIVE_BOAT = 'RECEIVE_BOAT';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_BOAT_ERRORS = 'RECEIVE_BOAT_ERRORS';
 
 const receiveAllBoats = boats => ({
   type: RECEIVE_ALL_BOATS,
@@ -15,7 +15,7 @@ const receiveBoat = boat => ({
 });
 
 const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_BOAT_ERRORS,
   errors
 });
 

@@ -1,15 +1,17 @@
 import React from 'react';
 import BookingFormContainer from './booking_form_container';
+import BoatDetail from './boat_detail'
 
 
 class BoatShow extends React.Component {
 
   componentDidMount(){
-    debugger
     this.props.fetchBoat(this.props.boatId);
-    this.props.fetchBookings(this.props.boatId);
   }
 
+  componentWillReceiveProps(){
+    this.props.fetchBookings(this.props.boatId);
+  }
 
 
   render(){
@@ -42,12 +44,11 @@ class BoatShow extends React.Component {
         </div>
         <div className="boat-show-bottom">
           <div className="boat-show-info">
-            <p>{this.props.boat.title}</p>
-            <p>{this.props.boat.description}</p>
+            <BoatDetail boat={this.props.boat} />
             <p>Boat Show Reviews</p>
           </div>
           <div className="boat-booking">
-            <BookingFormContainer />
+            <BookingFormContainer/>
           </div>
         </div>
       </div>

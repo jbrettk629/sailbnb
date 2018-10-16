@@ -1,4 +1,4 @@
-import { RECEIVE_ERRORS, RECEIVE_BOAT } from '../actions/boat_actions';
+import { RECEIVE_BOAT_ERRORS, RECEIVE_BOAT } from '../actions/boat_actions';
 import merge from 'lodash/merge';
 
 const BoatErrorsReducer = (state = [], action) => {
@@ -6,7 +6,7 @@ const BoatErrorsReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_BOAT:
       return [];
-    case RECEIVE_ERRORS:
+    case RECEIVE_BOAT_ERRORS:
       return action.errors;
     default:
       return state;

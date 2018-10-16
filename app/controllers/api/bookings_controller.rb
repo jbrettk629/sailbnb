@@ -2,14 +2,10 @@ class Api::BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    debugger
-    @boat = Boat.find(params[:boat_id])
-    debugger
-    @booking.boat_id ||= @boat.id
-    debugger
+
     @booking.user_id ||= current_user.id
-    debugger
-    if @booking.save!
+
+    if @booking.save
       render 'api/bookings/show'
     else
       render json: @booking.errors.full_messages, status: 422

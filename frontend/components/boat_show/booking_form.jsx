@@ -1,16 +1,20 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 
 class BookingForm extends React.Component {
   constructor(props){
     super(props);
-    debugger
-    this.state = { boat_id: '', checkin: '', checkout: '', guests: 1};
+    const boat_id = this.props.match.params.boatId;
+    this.state = { boat_id: boat_id, checkin: '', checkout: '', guests: 1};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount(){
+
+  }
+
   handleSubmit(e){
-    debugger
     e.preventDefault();
     this.props.createBooking(this.state);
   }
@@ -21,13 +25,34 @@ class BookingForm extends React.Component {
     );
   }
 
-  render(){
+  renderErrors(){
+    return (
+       <ul>
+          {this.props.errors.map( error => <li className='errors-li'>{error}</li>)}
+      </ul>
+    );
+  }
 
+
+  renderConfirmation(){
+    return <li>Congrats, you're booked!</li>
+  }
+
+  renderResults(){
+    if (this.props.errors.length === 0) {
+      return this.renderConfirmation();
+    } else {
+      return this.renderErrors();
+    };
+  }
+
+  render(){
     return (
       <div className='booking-object'>
         <div className='boat-booking-info'>
           <p>Booking rate and rating</p>
         </div>
+        {this.renderErrors()}
         <form className='booking-form' onSubmit={this.handleSubmit}>
           <div className='booking-fields'>
             <label>Dates</label>
@@ -57,4 +82,4 @@ class BookingForm extends React.Component {
 
 }
 
-export default BookingForm;
+export default withRouter(BookingForm);

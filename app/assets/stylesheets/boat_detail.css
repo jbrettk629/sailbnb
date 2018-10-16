@@ -1,0 +1,38 @@
+.boat-detail-object {
+  border: 1px solid red;
+}
+
+.boat-detail-title {
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.boat-detail-title > h2 {
+  font-style: Helvetica;
+  font-weight: 550;
+  font-size: 35px;
+}
+
+.boat-detail-location {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.boat-detail-location > h3 {
+  font-style: Helvetica;
+  font-weight: lighter;
+  font-size: 14;
+}
+
+.hook {
+  padding-left: 10px
+  border: 1px solid lightgray;
+  height: auto;
+}
+
+.hook > span {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

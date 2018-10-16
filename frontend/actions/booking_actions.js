@@ -21,7 +21,6 @@ const receiveErrors = errors => ({
 })
 
 export const fetchBookings = (boat_id) => dispatch => {
-  debugger
   return (
     BookingsApiUtil.fetchBookings(boat_id)
       .then( bookings => dispatch(receiveBookings(bookings)))
@@ -29,7 +28,7 @@ export const fetchBookings = (boat_id) => dispatch => {
 };
 
 export const fetchBooking = (boat_id, booking_id) => dispatch => {
-  debugger
+  // debugger
   return (
     BookingsApiUtil.fetchBooking(boat_id, booking_id)
       .then( booking => dispatch(receiveBooking(booking)))
@@ -37,11 +36,12 @@ export const fetchBooking = (boat_id, booking_id) => dispatch => {
 };
 
 export const createBooking = (booking) => dispatch => {
-  debugger
   return (
     BookingsApiUtil.createBooking(booking).then(
       booking => dispatch(receiveBooking(booking)),
-      err => dispatch(receiveErrors(err))
+      err => {
+        debugger
+        dispatch(receiveErrors(err.responseJSON)) }
     )
   );
 };

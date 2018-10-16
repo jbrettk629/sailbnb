@@ -2,17 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
-// import BenchShowContainer from '../boat_show/boat_show_container';
-
 class BoatIndexItem extends React.Component {
   constructor(props){
     super(props);
   }
 
-  // handleClick(){
-  //   const boatId = this.props.boat.id;
-  //   this.props.history.push(`/boats/${boatId}`);
-  // }
 
   render() {
     const  { boat } = this.props;
