@@ -28,11 +28,14 @@
 .hook {
   padding-left: 10px;
   border: 1px solid lightgray;
-  height: auto;
+  height: 80px;
+  align-items: vertical;
 }
 
-.hook > span {
+.hook > div {
   padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: lighter;
 }

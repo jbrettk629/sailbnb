@@ -15,7 +15,7 @@ class BoatShow extends React.Component {
 
 
   render(){
-    debugger
+
     if (this.props.boat === undefined) return '';
     return (
 
@@ -48,9 +48,9 @@ class BoatShow extends React.Component {
             <BoatDetail boat={this.props.boat} />
             <p>Boat Show Reviews</p>
           </div>
-          <div className="boat-booking">
-            <BookingFormContainer/>
-          </div>
+
+          <BookingFormContainer boat={this.props.boat}/>
+
         </div>
       </div>
     );

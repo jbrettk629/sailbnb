@@ -12,9 +12,8 @@ const BoatDetail = ({boat}) => {
         <h3>{boat.location}</h3>
       </div>
       <div className="hook">
-        <span id="1">This boat is on people's minds</span>
-        <br/>
-        <span id="2">It's been views 300+ times in the past week</span>
+        <div id="1">This boat is on people's minds</div>
+        <div id="2">It's been views 300+ times in the past week</div>
       </div>
 
       <div className="boat-detail-amenities">

@@ -50,29 +50,39 @@ class BookingForm extends React.Component {
     return (
       <div className='booking-object'>
         <div className='boat-booking-info'>
-          <p>Booking rate and rating</p>
+          <span id="booking-rate">${this.props.boat.rate}</span>
+          <span id="booking-per"> per night</span>
         </div>
         {this.renderErrors()}
         <form className='booking-form' onSubmit={this.handleSubmit}>
-          <div className='booking-fields'>
             <label>Dates</label>
-            <input
-              type="date"
-              onChange={this.updateForm('checkin')}
-              placeholder='Checkin' />
-            <input
-              type="date"
-              onChange={this.updateForm('checkout')}
-              placeholder='Checkout' />
-          </div>
+            <br/>
+            <div className="checkin">
+              <label>Checkin:</label>
+              <input
+                type="date"
+                onChange={this.updateForm('checkin')}
+                placeholder='Checkin' />
+            </div>
+            <div className="checkout">
+              <label>Checkout:</label>
+              <input
+                type="date"
+                onChange={this.updateForm('checkout')}
+                placeholder='Checkout' />
+            </div>
           <label>Guests</label>
+            <br/>
           <input
+            id="guests"
             type="text"
             value={this.state.guests}
             onChange={this.updateForm('guests')}
             placeholder="1" />
           <br/>
-          <input type="submit" value="Request To Book" />
+          <div className="submit-container">
+            <input id="submit" type="submit" value="Request To Book" />
+          </div>
         </form>
       </div>
     );
