@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import NavBarContainer from './navbar/navbar_container';
@@ -14,20 +14,15 @@ const App = () => (
   <div className="general-body">
 
     <Modal />
+    <Route exact path='/' component={NavBarContainer}></Route>
+    <Route path='/boats' component={OtherNavBarContainer}></Route>
 
-    <header className="navbar">
-      <Route exact path='/' component={NavBarContainer}></Route>
-      <Route path='/boats' component={OtherNavBarContainer}></Route>
-    </header>
-
-    <div className="splash-page">
-      <Route exact path='/' component={SplashContainer} />
-    </div>
-    <Route path='/boats/:boatId' component={BoatShowContainer} />
-
-    <div className='boats-index-with-map'>
-        <Route exact path='/boats' component={SearchContainer} />
-    </div>
+    <Switch>
+      <Route exact path='/boats/:boatId' component={BoatShowContainer} />
+      <Route exact path='/boats' component={SearchContainer} />
+      <Route exact path='/'component={SplashContainer} />
+      <Redirect to='/' />
+    </Switch>
   </div>
 );
 

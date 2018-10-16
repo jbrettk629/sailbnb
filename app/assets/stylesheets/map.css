@@ -4,6 +4,5 @@
   float: left;
   width: 45%;
   height: 500px;
-  background-color: yellow;
-  position: fixed;
+  position: sticky;
 }

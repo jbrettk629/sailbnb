@@ -10,12 +10,11 @@ class BoatIndexItem extends React.Component {
 
   render() {
     const  { boat } = this.props;
-
     return (
       <Link className="boat-show-link" to={`/boats/${boat.id}`}>
         <div className="boat-index-item" >
           <div className="boat-index-picture">
-            <img></img>
+            <img src={boat.photoUrls[0]}/>
           </div>
           <div className="boat-index-info">
             <div className="boat-index-middle-info">

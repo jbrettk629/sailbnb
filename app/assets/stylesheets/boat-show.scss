@@ -14,7 +14,12 @@
   height: 100%;
   border: 1px solid red;
   float: left;
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
+
 
 .boat-show-pics-right {
   width: 50%;
@@ -38,6 +43,10 @@
   height: 100%;
   float: left;
   border: 1px solid red;
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .boat-show-bottom {
