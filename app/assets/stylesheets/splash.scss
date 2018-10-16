@@ -3,7 +3,7 @@
   // overflow: hidden;
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: -1;
+  // z-index: -1;
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -15,5 +15,43 @@
   width: 100%;
   height: auto;
   top: -200px;
+  // z-index: -1;
 
+}
+
+.searchbar {
+  position: relative;
+  top: 400px;
+  left: 35%;
+  width: 30%;
+  height: 50px;
+  background-color: white;
+  z-index: 5;
+}
+
+.searchbar > form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  vertical-align: center;
+}
+
+#search-icon {
+  height: 40px;
+  width: 40px;
+  padding-top: 5px;
+
+}
+
+#search-input {
+  width: 60%;
+  height: 95%;
+  border: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+#search-button {
+  width: 10%;
+  border: none;
 }

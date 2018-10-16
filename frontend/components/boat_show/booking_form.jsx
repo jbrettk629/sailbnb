@@ -71,14 +71,16 @@ class BookingForm extends React.Component {
                 onChange={this.updateForm('checkout')}
                 placeholder='Checkout' />
             </div>
-          <label>Guests</label>
+            <label>Guests</label>
             <br/>
-          <input
-            id="guests"
-            type="text"
-            value={this.state.guests}
-            onChange={this.updateForm('guests')}
-            placeholder="1" />
+            <div className="guests">
+              <label>Number of guests: </label>
+              <input
+                type="text"
+                value={this.state.guests}
+                onChange={this.updateForm('guests')}
+                placeholder="1" />
+            </div>
           <br/>
           <div className="submit-container">
             <input id="submit" type="submit" value="Request To Book" />
