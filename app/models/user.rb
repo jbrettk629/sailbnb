@@ -6,9 +6,9 @@ class User < ApplicationRecord
   validates :email, :session_token, uniqueness:true
   validates :password, length: {minimum:6, allow_nil:true}
 
-  has_many :reviews
+  has_many :reviews, through: :bookings
   has_many :bookings
-  
+
   attr_reader :password
 
   def password=(password)
