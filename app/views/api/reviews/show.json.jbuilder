@@ -4,6 +4,9 @@ end
 
 json.user do
   @review.user do |user|
+    json.extract! user, :id, :name
+  end
+end
 
 
 

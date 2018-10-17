@@ -1,0 +1,42 @@
+.boat-review-item {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  height: 100px;
+  width: 95%;
+  font-size: 15px;
+  font-style: Helvetica;
+}
+
+.profile-pic {
+  float: left;
+  width:70px;
+  height: 100%;
+}
+
+.review-info {
+  float: left;
+  color: gray;
+}
+
+.review-description {
+  line-height: 22px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 100;
+  font-family: Helvetica;
+}
+.posting-info {
+  line-height: 18px;
+  padding: 10px;
+}
+
+.posting-info > .date {
+  font-size: 14px;
+  font-weight: 200;
+
+}
+
+.posting-info > .author_name {
+  font-size: 14px;
+  font-weight: 600;
+}

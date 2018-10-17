@@ -5,10 +5,7 @@ const BoatReviewsIndex = (props) => {
 
   const reviews = Object.values(props.reviews).map( review => {
     return (
-      <BoatReviewItem
-        review={review}
-        boatId={props.boatId}
-        fetchReview={props.fetchReview} />
+      <BoatReviewItem key={review.id} review={review} />
     );
   })
 

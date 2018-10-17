@@ -7,10 +7,10 @@ class Review < ApplicationRecord
 
   has_one :user,
     through: :booking,
-    source: :user_id
+    source: :user
 
   has_one :boat,
     through: :booking,
-    source: :boat_id
+    source: :boat
 
 end

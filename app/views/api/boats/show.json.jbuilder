@@ -5,7 +5,7 @@ end
 json.reviews do
   @boat.reviews.each do |review|
     json.set! review.id do
-      json.extract! review, :id, :overall, :description
+      json.extract! review, :id, :author_name, :overall, :description, :date
     end
   end
 end

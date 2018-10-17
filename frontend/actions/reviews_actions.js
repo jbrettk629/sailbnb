@@ -9,10 +9,13 @@ const receiveAllReviews = (reviews) => ({
   reviews
 })
 
-const receiveReview = (review) => ({
+const receiveReview = (payload) => {
+  debugger
+  return ({
   type: RECEIVE_REVIEW,
-  review
+  payload
 })
+}
 
 const receiveErrors = (errors) => ({
   type: RECEIVE_REVIEW_ERRORS,

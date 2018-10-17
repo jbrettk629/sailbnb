@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_17_181939) do
+ActiveRecord::Schema.define(version: 2018_10_17_231010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,8 @@ ActiveRecord::Schema.define(version: 2018_10_17_181939) do
     t.float "value"
     t.text "description", null: false
     t.integer "booking_id", null: false
+    t.string "author_name"
+    t.string "date"
     t.index ["booking_id"], name: "index_reviews_on_booking_id", unique: true
   end
 
