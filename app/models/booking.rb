@@ -4,7 +4,9 @@ class Booking < ApplicationRecord
   validate :checkin_before_checkout
   validate :no_overlap
 
+  belongs_to :user
   belongs_to :boat
+  has_one :booking
 
   def checkin_before_checkout
     if checkout < checkin

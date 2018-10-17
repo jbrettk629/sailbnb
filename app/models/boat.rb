@@ -3,6 +3,7 @@ class Boat < ApplicationRecord
   validates :owner_id, :title, :description, :lat, :lng, :location, :rate, :guests, :bedrooms, :beds, :baths, presence:true
 
   has_many :bookings
+  has_many :reviews
 
   has_many_attached :photos
 

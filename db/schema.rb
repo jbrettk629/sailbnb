@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_14_222110) do
+ActiveRecord::Schema.define(version: 2018_10_17_015709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -63,6 +63,23 @@ ActiveRecord::Schema.define(version: 2018_10_14_222110) do
     t.integer "guests", null: false
     t.index ["boat_id"], name: "index_bookings_on_boat_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "boat_id", null: false
+    t.float "overall", null: false
+    t.float "accuracy"
+    t.float "communication"
+    t.float "location"
+    t.float "checkin"
+    t.float "cleanliness"
+    t.float "value"
+    t.text "description", null: false
+    t.integer "booking_id", null: false
+    t.index ["boat_id"], name: "index_reviews_on_boat_id"
+    t.index ["booking_id"], name: "index_reviews_on_booking_id", unique: true
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
