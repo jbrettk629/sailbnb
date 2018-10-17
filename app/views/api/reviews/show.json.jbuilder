@@ -1,1 +1,12 @@
-json.extract! @review, :id, :user_id, :boat_id, :booking_id, :overall, :accuracy, :communication, :cleanliness, :location, :checkin, :value, :description
+json.review do
+  json.extract! @review, :id, :booking_id, :overall, :description
+end
+
+json.user do
+  @review.user do |user|
+
+
+
+
+
+#  :accuracy, :communication, :cleanliness, :location, :checkin, :value,
