@@ -9,7 +9,7 @@ export const fetchReviews = (boatId) => {
 export const fetchReview = (boatId, reviewId) => {
   return $.ajax({
     method: 'GET',
-    url: `api/boats/${boatId}`
+    url: `api/boats/${boatId}/reviews/${reviewId}`
   });
 }
 

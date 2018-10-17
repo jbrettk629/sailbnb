@@ -2,7 +2,7 @@ import * as BookingsApiUtil from '../util/bookings_api_util';
 
 export const RECEIVE_BOOKINGS = 'RECEIVE_BOOKINGS';
 export const RECEIVE_BOOKING = 'RECEIVE_BOOKING';
-export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const RECEIVE_BOOKING_ERRORS = 'RECEIVE_BOOKING_ERRORS';
 
 
 const receiveBookings = bookings => ({
@@ -16,7 +16,7 @@ const receiveBooking = booking => ({
 })
 
 const receiveErrors = errors => ({
-  type: RECEIVE_ERRORS,
+  type: RECEIVE_BOOKING_ERRORS,
   errors
 })
 
@@ -28,7 +28,6 @@ export const fetchBookings = (boat_id) => dispatch => {
 };
 
 export const fetchBooking = (boat_id, booking_id) => dispatch => {
-  // debugger
   return (
     BookingsApiUtil.fetchBooking(boat_id, booking_id)
       .then( booking => dispatch(receiveBooking(booking)))
@@ -39,9 +38,7 @@ export const createBooking = (booking) => dispatch => {
   return (
     BookingsApiUtil.createBooking(booking).then(
       booking => dispatch(receiveBooking(booking)),
-      err => {
-        debugger
-        dispatch(receiveErrors(err.responseJSON)) }
+      err => {dispatch(receiveErrors(err.responseJSON)) }
     )
   );
 };

@@ -8,6 +8,7 @@ import * as BoatApiUtil from './util/boats_api_util';
 import * as BookingsApiUtil from './util/bookings_api_util';
 import * as BookingsActions from './actions/booking_actions';
 import * as ReviewsApiUtil from './util/reviews_api_util';
+import * as ReviewsActions from './actions/reviews_actions';
 
 
 
@@ -39,9 +40,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.fetchBookings = BookingsActions.fetchBookings;
   window.fetchBooking = BookingsActions.fetchBooking;
   window.createBooking = BookingsActions.createBooking;
-  window.fetchReviews = ReviewsApiUtil.fetchReviews;
-  window.fetchReview = ReviewsApiUtil.fetchReview;
-  window.createReview = ReviewsApiUtil.createReview;
+  window.fetchReviewsUtil = ReviewsApiUtil.fetchReviews;
+  window.fetchReviewUtil = ReviewsApiUtil.fetchReview;
+  window.createReviewUtil = ReviewsApiUtil.createReview;
+  window.fetchReviews = ReviewsActions.fetchReviews;
+  window.fetchReview = ReviewsActions.fetchReview;
+  window.createReview = ReviewsActions.createReview;
+
 
 
   const root = document.getElementById('root');

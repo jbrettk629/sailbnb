@@ -12,6 +12,7 @@ class Api::BoatsController < ApplicationController
 
 
   def show
+    debugger
     @boat = Boat.find(params[:id])
     render :show
   end
