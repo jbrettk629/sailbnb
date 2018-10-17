@@ -9,9 +9,9 @@ const receiveAllBoats = boats => ({
   boats
 });
 
-const receiveBoat = boat => ({
+const receiveBoat = payload => ({
   type: RECEIVE_BOAT,
-  boat
+  payload
 });
 
 const receiveErrors = errors => ({

@@ -10,7 +10,6 @@ class TripsIndex extends React.Component {
   }
 
   componentDidMount(){
-    debugger
     this.props.fetchUsersBookings()
   }
 

@@ -21,7 +21,6 @@ class TripsIndexItem extends React.Component {
   }
 
   render(){
-    debugger
     return (
       <div>
         <h2>This is a booking!</h2>

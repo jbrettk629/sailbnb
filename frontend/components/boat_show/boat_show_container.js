@@ -8,6 +8,7 @@ const mapStateToProps = ( state, ownProps) => {
 return ({
   boatId: boatId,
   boat: state.entities.boats[boatId],
+  reviews: state.entities.reviews
 });
 };
 

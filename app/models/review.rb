@@ -5,11 +5,11 @@ class Review < ApplicationRecord
 
   belongs_to :booking
 
-  belongs_to :user,
+  has_one :user,
     through: :booking,
     source: :user_id
 
-  belongs_to :boat,
+  has_one :boat,
     through: :booking,
     source: :boat_id
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingFormContainer from './booking_form_container';
 import BoatDetail from './boat_detail'
+import BoatReviewsContainer from './boat_reviews_container'
 
 
 class BoatShow extends React.Component {
@@ -15,7 +16,6 @@ class BoatShow extends React.Component {
 
 
   render(){
-
     if (this.props.boat === undefined) return '';
     return (
 
@@ -46,7 +46,7 @@ class BoatShow extends React.Component {
         <div className="boat-show-bottom">
           <div className="boat-show-info">
             <BoatDetail boat={this.props.boat} />
-            <p>Boat Show Reviews</p>
+            <BoatReviewsContainer reviews={this.props.reviews} boatId={this.props.boatId}/>
           </div>
 
           <BookingFormContainer boat={this.props.boat}/>

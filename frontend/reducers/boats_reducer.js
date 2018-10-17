@@ -7,7 +7,7 @@ const BoatReducer = (state = {}, action) => {
     case RECEIVE_ALL_BOATS:
       return action.boats;
     case RECEIVE_BOAT:
-      return merge({}, state, {[action.boat.id]: action.boat});
+      return merge({}, state, {[action.payload.boat.id]: action.payload.boat});
     default:
       return state;
   }

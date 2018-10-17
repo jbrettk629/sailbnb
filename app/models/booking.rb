@@ -6,7 +6,7 @@ class Booking < ApplicationRecord
 
   belongs_to :user
   belongs_to :boat
-  has_many :reviews
+  has_one :review
 
   def checkin_before_checkout
     if checkout < checkin
