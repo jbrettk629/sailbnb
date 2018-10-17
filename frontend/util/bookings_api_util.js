@@ -1,4 +1,11 @@
 
+export const fetchUsersBookings = () => {
+  return $.ajax ({
+    method: 'GET',
+    url: 'api/bookings'
+  })
+}
+
 export const fetchBookings = (boat_id) => {
   return $.ajax ({
     method: 'GET',

@@ -7,6 +7,7 @@ import OtherNavBarContainer from './navbar/other_navbar_container';
 import SplashContainer from './splash/splash_container';
 import SearchContainer from './search/search_container';
 import BoatShowContainer from './boat_show/boat_show_container';
+import TripsIndexContainer from './trips/trips_container';
 // import BoatsContainer from './boats/boats_container';
 
 
@@ -20,7 +21,8 @@ const App = () => (
     <Switch>
       <Route exact path='/boats/:boatId' component={BoatShowContainer} />
       <Route exact path='/boats' component={SearchContainer} />
-      <Route exact path='/'component={SplashContainer} />
+      <Route exact path='/bookings' component={TripsIndexContainer} />
+      <Route exact path='/' component={SplashContainer} />
       <Redirect to='/' />
     </Switch>
   </div>

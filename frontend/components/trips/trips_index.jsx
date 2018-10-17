@@ -1,22 +1,40 @@
 import React from 'react';
+import { fetchUsersBookings } from '../../actions/booking_actions';
+import { fetchReview, fetchReviews, createReview } from '../../actions/reviews_actions';
+import TripsIndexItem from './trip_index_item';
 
 
 class TripsIndex extends React.Component {
-  super(props);
+  constructor(props){
+    super(props);
+  }
 
-  this.handleSubmit = this.handleSubmit.bind(this);
+  componentDidMount(){
+    debugger
+    this.props.fetchUsersBookings()
+  }
+
+  render(){
+    const trips = Object.values(this.props.bookings).map( booking => {
+      return (
+        <TripsIndexItem
+          booking={booking}
+          fetchBoat={this.props.fetchBoat}
+          fetchReview={this.props.fetchReview} />
+      );
+    });
+
+    return (
+      <div>
+        <h1>This is the users booking index page</h1>
+        <ul>
+          {trips}
+        </ul>
+      </div>
+
+    );
+  }
 }
 
-handleSubmit(e){
-  e.preventDefault;
-}
 
-render(){
-
-  return (
-    <div>
-
-    </div>
-
-  );
-}
+export default TripsIndex;

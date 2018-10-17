@@ -18,13 +18,15 @@ class Api::BookingsController < ApplicationController
   end
 
   def index
-    @boat = Boat.find(params[:boat_id])
-    @bookings = @boat.bookings
+    @user = User.find(current_user.id)
+    # @boat = Boat.find(params[:boat_id])
+    @bookings = @user.bookings
+
     render :index
   end
 
   def booking_params
-    params.require(:booking).permit(:boat_id, :user_id, :checkin, :checkout, :guests, photos: [])
+    params.require(:booking).permit(:boat_id, :user_id, :checkin, :checkout, :guests, :review_id, photos: [])
   end
 
 

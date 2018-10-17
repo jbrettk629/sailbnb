@@ -20,6 +20,12 @@ const receiveErrors = errors => ({
   errors
 })
 
+export const fetchUsersBookings = () => dispatch => {
+  return (
+    BookingsApiUtil.fetchUsersBookings().then( bookings => dispatch(receiveBookings(bookings)))
+  );
+}
+
 export const fetchBookings = (boat_id) => dispatch => {
   return (
     BookingsApiUtil.fetchBookings(boat_id)

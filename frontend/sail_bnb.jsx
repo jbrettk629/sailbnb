@@ -31,18 +31,24 @@ document.addEventListener('DOMContentLoaded', () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
+  window.fetchBoatsUtil = BoatApiUtil.fetchBoats;
+
   window.fetchBoat = BoatAction.fetchBoat;
   window.fetchBoats = BoatAction.fetchBoats;
-  window.fetchBoatsUtil = BoatApiUtil.fetchBoats;
+
   window.fetchBookingsUtil = BookingsApiUtil.fetchBookings;
   window.fetchBookingUtil = BookingsApiUtil.fetchBooking;
   window.createBookingUtil = BookingsApiUtil.createBooking;
+
   window.fetchBookings = BookingsActions.fetchBookings;
+  window.fetchUsersBookings = BookingsActions.fetchUsersBookings;
   window.fetchBooking = BookingsActions.fetchBooking;
   window.createBooking = BookingsActions.createBooking;
+
   window.fetchReviewsUtil = ReviewsApiUtil.fetchReviews;
   window.fetchReviewUtil = ReviewsApiUtil.fetchReview;
   window.createReviewUtil = ReviewsApiUtil.createReview;
+
   window.fetchReviews = ReviewsActions.fetchReviews;
   window.fetchReview = ReviewsActions.fetchReview;
   window.createReview = ReviewsActions.createReview;

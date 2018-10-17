@@ -41,7 +41,7 @@ class SplashPage extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <img id='search-icon' src='/assets/searchicon' />
             <input id="search-input"
-              autocomplete="off"
+              autoComplete="off"
               type="text"
               value={this.state.location}
               placeholder="Search"

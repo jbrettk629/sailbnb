@@ -1,2 +1,11 @@
-json.extract! @boat, :id, :owner_id, :title, :location, :description, :rate, :guests, :bedrooms, :beds, :baths, :lat, :lng
-json.photoUrls @boat.photos.map { |file| url_for(file)}
+json.boat do
+  json.extract! @boat, :id, :owner_id, :title, :location, :description, :rate, :guests, :bedrooms, :beds, :baths, :lat, :lng
+  json.photoUrls @boat.photos.map { |file| url_for(file)}
+end
+json.reviews do
+  @boat.reviews.each do |review|
+    json.set! review.id do
+      json.extract! review, :id
+    end
+  end
+end
