@@ -1,7 +1,8 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form'
 import { closeModal } from '../../actions/modal_actions';
-import { updateReview } from '../../actions/reviews_actions'
+import { updateReview } from '../../actions/reviews_actions';
+import { fetchUsersBookings } from '../../actions/booking_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,6 +19,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchReview: (boatId, reviewId) => dispatch(fetchReview(boatId, reviewId)),
   updateReview: (review) => dispatch(updateReview(review)),
   closeModal: () => dispatch(closeModal()),
+  fetchUsersBookings: () => dispatch(fetchUsersBookings()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);

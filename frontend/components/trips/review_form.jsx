@@ -20,6 +20,8 @@ class ReviewForm extends React.Component {
     debugger
     e.preventDefault();
     this.props.updateReview(this.state, this.state.booking_id)
+    this.props.fetchUsersBookings();
+    this.props.closeModal();
   }
 
 
