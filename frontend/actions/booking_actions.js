@@ -10,9 +10,9 @@ const receiveBookings = bookings => ({
   bookings
 })
 
-const receiveBooking = booking => ({
+const receiveBooking = payload => ({
   type: RECEIVE_BOOKING,
-  booking
+  payload
 })
 
 const receiveErrors = errors => ({

@@ -7,7 +7,7 @@ const BookingsReducer = (state = {}, action) => {
     case RECEIVE_BOOKINGS:
       return action.bookings;
     case RECEIVE_BOOKING:
-      return merge({}, state, {[action.booking.id]: action.booking});
+      return merge({}, state, {[action.payload.booking.id]: action.payload.booking});
     default:
       return state;
   }
