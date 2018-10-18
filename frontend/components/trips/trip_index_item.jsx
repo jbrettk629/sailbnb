@@ -15,12 +15,15 @@ class TripsIndexItem extends React.Component {
         <div className="booking-review-info">
           <div id="review-rating" >Your Overall Rating: {this.props.booking.review.overall}</div>
           <div id="review-des" >{this.props.booking.review.description}</div>
+          <div className="button-div">
+            <button className="edit-review-button" onClick={() => this.props.openModal('review', data)}>Edit Review</button>
+          </div>
         </div>
       );
 
     const data = {review: this.props.booking.review, boatId: this.props.booking.boat_id}
     const reviewForm = () => (
-      <div>
+      <div className="booking-review-info">
         <button className="review-button" onClick={() => this.props.openModal('review', data)}>Create a Review</button>
       </div>
     );
