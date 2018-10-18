@@ -6,6 +6,8 @@ class Api::BookingsController < ApplicationController
     @booking.user_id ||= current_user.id
 
     if @booking.save
+      review = Review.new({booking_id: @booking.id, overall: 3, description:'add description here'})
+      review.save!
       render 'api/bookings/show'
     else
       render json: @booking.errors.full_messages, status: 422
@@ -19,7 +21,7 @@ class Api::BookingsController < ApplicationController
 
   def index
     @user = User.find(current_user.id)
-    # @boat = Boat.find(params[:boat_id])
+
     @bookings = @user.bookings
 
     render :index

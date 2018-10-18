@@ -49,9 +49,10 @@ Booking.create(boat_id: 1, user_id: 1, guests: 2, checkin: '01/02/2019', checkou
 Booking.create(boat_id: 1, user_id: 2, guests: 3, checkin: '01/03/2019', checkout: '05/03/2019')
 Booking.create(boat_id: 2, user_id: 2, guests: 4, checkin: '20/12/2018', checkout: '03/01/2019')
 Booking.create(boat_id: 2, user_id: 1, guests: 5, checkin: '01/02/2019', checkout: '05/02/2019')
-Booking.create(boat_id: 2, user_id: 1, guests: 6, checkin: '12/05/2018', checkout: '13/05/2019')
+
 
 Review.create(booking_id: 1, author_name: "Brett", overall: 1.5, description: 'first booking', date: "June 2017")
 Review.create(booking_id: 2, author_name: "Brett", overall: 2.5, description: 'second booking', date: "August 2018")
 Review.create(booking_id: 3, overall: 3.5, author_name: "Nick", description: 'third booking', date: "April 2018")
 Review.create(booking_id: 4, overall: 4.5, author_name: "Nick", description: 'fourth booking', date: "September 2018")
+Review.create(booking_id: 5, overall: 5.0, author_name: "Brett", description: 'fifth booking', date: "September 2018")

@@ -7,7 +7,7 @@ import OtherNavBarContainer from './navbar/other_navbar_container';
 import SplashContainer from './splash/splash_container';
 import SearchContainer from './search/search_container';
 import BoatShowContainer from './boat_show/boat_show_container';
-import TripsIndexContainer from './trips/trips_container';
+import TripsIndexContainer from './trips/trips_index_container';
 // import BoatsContainer from './boats/boats_container';
 
 
@@ -17,6 +17,7 @@ const App = () => (
     <Modal />
     <Route exact path='/' component={NavBarContainer}></Route>
     <Route path='/boats' component={OtherNavBarContainer}></Route>
+    <Route path='/bookings' component={OtherNavBarContainer}></Route>
 
     <Switch>
       <Route exact path='/boats/:boatId' component={BoatShowContainer} />

@@ -3,7 +3,7 @@ json.booking do
 end
 
 json.review do
-  @booking.reviews do |review|
+  @booking.review do |review|
     json.set! review.id do
       json.extract! review, :id, :booking_id, :overall, :description
     end
@@ -17,4 +17,4 @@ json.boat do
       json.photoUrls boat.photos.map{ |file| url_for(file)}
     end
   end
-end 
+end

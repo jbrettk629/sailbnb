@@ -3,7 +3,6 @@ import { fetchUsersBookings } from '../../actions/booking_actions';
 import { fetchReview, fetchReviews, createReview } from '../../actions/reviews_actions';
 import TripsIndexItem from './trip_index_item';
 
-
 class TripsIndex extends React.Component {
   constructor(props){
     super(props);
@@ -14,26 +13,24 @@ class TripsIndex extends React.Component {
   }
 
   render(){
-    const trips = Object.values(this.props.bookings).map( booking => {
+    const trips = this.props.bookings.map( booking => {
       return (
         <TripsIndexItem
+          key={booking.id}
           booking={booking}
-          fetchBoat={this.props.fetchBoat}
-          fetchReview={this.props.fetchReview} />
+          createReview={this.props.createReview} />
       );
     });
 
     return (
-      <div>
-        <h1>This is the users booking index page</h1>
-        <ul>
+      <div className="trips-index">
+        <h1>Your Past Trips</h1>
+        <div className="trips">
           {trips}
-        </ul>
+        </div>
       </div>
-
     );
   }
 }
-
 
 export default TripsIndex;

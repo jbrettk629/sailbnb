@@ -7,10 +7,6 @@ class TripsIndexItem extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidMount(){
-    this.props.fetchBoat(this.props.booking.boat_id);
-    this.props.fetchReview()
-  }
 
   handleSubmit(e){
     e.preventDefault
@@ -20,13 +16,36 @@ class TripsIndexItem extends React.Component {
 
   }
 
+
   render(){
-    return (
+    // if conditional then const = review info else const = reviewform
+    // put {const} in your return function in your render
+    const reviewInfo = () => (
+        <div id="booking-review-info">
+          <div id="review-rating" >{this.props.booking.review_rat}</div>
+          <div id="review-des" >{this.props.booking.review_des}</div>
+        </div>
+      );
+
+    const reviewForm = () => (
       <div>
-        <h2>This is a booking!</h2>
+        // <button onClick={() => openModal('login')}>Create a Review</button>
       </div>
+    );
 
 
+    return (
+      <div className="trip-index-item">
+        <div className="booking-pic">
+          <img src={this.props.booking.boat_photos[0]} />
+        </div>
+        <div className="booking-trip-info">
+          <div id="booking-dates">{this.props.booking.checkin} - {this.props.booking.checkout}</div>
+          <div id="booking-location">{this.props.booking.boat_loc}</div>
+          <div id="booking-title">{this.props.booking.boat_title}</div>
+        </div>
+        {reviewInfo()}
+      </div>
     );
   }
 

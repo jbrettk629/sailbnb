@@ -6,17 +6,12 @@ import { fetchBoat } from '../../actions/boat_actions';
 
 
 const mapStateToProps = state => ({
-  bookings: state.entities.bookings,
-  reviews: state.entities.reviews,
-  boats: state.entities.boats
+  bookings: Object.values(state.entities.bookings)
 })
 
 const mapDispatchToProps = dispatch => ({
-  fetchUsersBookings: () => dispatch(fetchUsersBookings()),
-  fetchRevies: (boatId) => dispatch(fetchReviews(boatId)),
-  fetchReview: (boatId, reviewId) => dispatch(fetchReview(boatId, reviewId)),
-  fetchBoat: (boatId) => dispatch(fetchBoat(boatId)),
   createReview: (review) => dispatch(createReview(review)),
+  fetchUsersBookings: () => dispatch(fetchUsersBookings())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripsIndex);
