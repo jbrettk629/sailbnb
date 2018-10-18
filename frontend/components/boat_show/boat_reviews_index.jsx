@@ -15,7 +15,6 @@ const BoatReviewsIndex = (props) => {
   }
 
   const reviews = Object.values(props.reviews).map( review => {
-    debugger
     if (review.author_name === null){
       return null;
     } else {

@@ -39,21 +39,21 @@ boat7 =Boat.create(owner_id: 1, title:'30ft Houseboat', location: 'San Francisco
 pic11 = File.open('app/assets/images/birdseye-view-boat.jpg')
 boat7.photos.attach(io: pic11, filename: 'birdseye-view-boat')
 
-user1 = User.create(name: 'brett', email: 'brett@email', password: 'password')
-# pro-pic1 = File.open('app/assets/images/pro-pic-m1.jpg')
-# user1.photo.attach(io: pro-pic1, filename: 'pro-pic-m1.jpg')
+user1 = User.create(name: 'Brett K.', email: 'brett@email', password: 'password')
+propic1 = File.open('app/assets/images/pro-pic-m1.jpeg')
+user1.photo.attach(io: propic1, filename: 'pro-pic-m1.jpeg')
 
-user2 = User.create(name: 'nick', email: 'nick@email', password: 'password')
-# pro-pic2 = File.open('app/assets/images/pro-pic-m2.jpg')
-# user1.photo.attach(io: pro-pic2, filename: 'pro-pic-m2.jpg')
+user2 = User.create(name: 'Jerry M.', email: 'jerry@email', password: 'password')
+propic2 = File.open('app/assets/images/pro-pic-m2.jpeg')
+user2.photo.attach(io: propic2, filename: 'pro-pic-m2.jpeg')
 
-user3 = User.create(name: 'jeff', email: 'jeff@email', password: 'password')
-# pro-pic3 = File.open('app/assets/images/pro-pic-g1.jpg')
-# user1.photo.attach(io: pro-pic3, filename: 'pro-pic-g1.jpg')
+user3 = User.create(name: 'Michelle F.', email: 'michelle@email', password: 'password')
+propic3 = File.open('app/assets/images/pro-pic-g1.jpeg')
+user3.photo.attach(io: propic3, filename: 'pro-pic-g1.jpeg')
 
-user4 = User.create(name: 'guest', email: 'guest@email', password: 'password')
-# pro-pic4 = File.open('app/assets/images/pro-pic-g2.jpg')
-# user1.photo.attach(io: pro-pic4, filename: 'pro-pic-g2.jpg')
+user4 = User.create(name: 'Guest', email: 'guest@email', password: 'password')
+propic4 = File.open('app/assets/images/pro-pic-g2.jpeg')
+user4.photo.attach(io: propic4, filename: 'pro-pic-g2.jpeg')
 
 Booking.create(boat_id: 1, user_id: 1, guests: 1, checkin: '01/01/2019', checkout: '05/01/2019')
 Booking.create(boat_id: 1, user_id: 1, guests: 2, checkin: '01/02/2019', checkout: '05/02/2019')
