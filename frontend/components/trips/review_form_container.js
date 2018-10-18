@@ -1,18 +1,22 @@
 import { connect } from 'react-redux';
 import ReviewForm from './review_form'
 import { closeModal } from '../../actions/modal_actions';
-import { createReview } from '../../actions/reviews_actions'
+import { updateReview } from '../../actions/reviews_actions'
+
 
 const mapStateToProps = (state, ownProps) => {
   debugger
   return ({
     errors: state.errors.reviews,
-    booking_id: ownProps.data,
+    review: ownProps.data.review,
+    boatId: ownProps.data.boatId,
+    user_name: Object.values(Object.values(state.entities.users))[0].name
   });
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  processForm: (review) => dispatch(createReview(review)),
+  fetchReview: (boatId, reviewId) => dispatch(fetchReview(boatId, reviewId)),
+  updateReview: (review) => dispatch(updateReview(review)),
   closeModal: () => dispatch(closeModal()),
 })
 

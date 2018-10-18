@@ -3,7 +3,6 @@ class Api::ReviewsController < ApplicationController
   def create
 
     @review = Review.new(review_params)
-debugger
     if @review.save
       render 'api/reviews/show'
     else
@@ -20,6 +19,16 @@ debugger
     @boat = Boat.find(params[:boat_id])
     @reviews = @boat.reviews
     render :index
+  end
+
+  def update
+    @review = Review.find(params[:id])
+
+    if @review.update_attributes(review_params)
+      render 'api/reviews/show'
+    else
+      render json: @review.errors.full_messages, status: 422
+    end
   end
 
   def destroy

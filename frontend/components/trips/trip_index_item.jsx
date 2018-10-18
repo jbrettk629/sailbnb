@@ -13,20 +13,20 @@ class TripsIndexItem extends React.Component {
     // put {const} in your return function in your render
     const reviewInfo = () => (
         <div className="booking-review-info">
-          <div id="review-rating" >Your Overall Rating: {this.props.booking.review_rat}</div>
-          <div id="review-des" >{this.props.booking.review_des}</div>
+          <div id="review-rating" >Your Overall Rating: {this.props.booking.review.overall}</div>
+          <div id="review-des" >{this.props.booking.review.description}</div>
         </div>
       );
 
-    const booking_id = this.props.booking.id
+    const data = {review: this.props.booking.review, boatId: this.props.booking.boat_id}
     const reviewForm = () => (
       <div>
-        <button className="review-button" onClick={() => this.props.openModal('review', booking_id)}>Create a Review</button>
+        <button className="review-button" onClick={() => this.props.openModal('review', data)}>Create a Review</button>
       </div>
     );
 
     const reviewChoice = () => {
-      if (this.props.booking.review_des === "add description here"){
+      if (this.props.booking.review.description === "add description here"){
         return reviewForm();
       } else {
         return reviewInfo();
