@@ -1,17 +1,28 @@
 class Booking < ApplicationRecord
 
-  validates :boat_id, :user_id, :checkin, :checkout, presence:true
+  validates :boat_id, :checkin, :checkout, presence:true
   validate :checkin_before_checkout
   validate :no_overlap
+  validate :future_date
 
   belongs_to :user
   belongs_to :boat
   has_one :review
 
+  def logged_in?
+
+  end
+
   def checkin_before_checkout
-    if checkout < checkin
-       errors[:booking] << 'checkout date must be after checkin date'
+    if checkout <= checkin
+       errors[:booking] << 'checkout date must be after checkin date!'
        # render json: ["checkout date must be after checkin date"], status: 404
+    end
+  end
+
+  def future_date
+    if checkin <= Date.today
+      errors[:booking] << 'checkin date must be at least one day ahead!'
     end
   end
 

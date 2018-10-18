@@ -6,7 +6,6 @@ import { fetchUsersBookings } from '../../actions/booking_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   return ({
     errors: state.errors.reviews,
     review: ownProps.data.review,

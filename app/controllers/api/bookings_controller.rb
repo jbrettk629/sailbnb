@@ -3,7 +3,12 @@ class Api::BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    @booking.user_id ||= current_user.id
+    if current_user
+      @booking.user_id ||= current_user.id
+    else
+      @booking.errors[:booking] << ': you must be signed in to book!'
+    end
+
 
     if @booking.save
       review = Review.new({booking_id: @booking.id, overall: 3, description:'add description here'})

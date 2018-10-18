@@ -3,3 +3,32 @@
   height: 500px;
   background: white;
 }
+
+.review-heading {
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #484848;
+}
+
+.form-review {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  width: 80%;
+  height: 100%;
+}
+
+.review-label {
+  width: 80%;
+  margin: 15px;
+}
+
+.form-review > input {
+  margin: 15px;
+}
+
+.form-review > textarea {
+  margin: 15px;
+}

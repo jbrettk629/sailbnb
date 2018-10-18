@@ -17,7 +17,6 @@ class ReviewForm extends React.Component {
   }
 
   handleSubmit(e){
-    debugger
     e.preventDefault();
     this.props.updateReview(this.state, this.state.booking_id)
     this.props.fetchUsersBookings();
@@ -35,21 +34,21 @@ class ReviewForm extends React.Component {
   render(){
     return(
       <div className="review-form">
-        <h2>Write a Review</h2>
+        <div className="review-heading">Write a Review</div>
         <div className="form container">
-          <form onSubmit={this.handleSubmit}>
-            <label>Overall Rating</label>
+          <form className="form-review" onSubmit={this.handleSubmit}>
+            <label className="review-label" >Overall Rating</label>
             <input
               type="text"
               value={this.state.overall}
               placeholder="Choose 0 through 5"
               onChange={this.updateForm('overall')} />
-            <label>Review</label>
-              <textarea
-                rows="5"
-                cols="30"
-                value={this.state.description}
-                onChange={this.updateForm('description')}/>
+            <label className="review-label">Review</label>
+            <textarea
+              rows="5"
+              cols="30"
+              value={this.state.description}
+              onChange={this.updateForm('description')}/>
             <input type="submit" value="Submit" />
           </form>
         </div>

@@ -1,14 +1,13 @@
 import { connect } from 'react-redux';
-import BoatReviewsIndex from './boat_reviews_index'
+import BoatReviewsIndex from './boat_reviews_index';
+import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = state => {
-  return ({
-    state: state,
-  });
-}
+const mapStateToProps = ({ session, entities: { users } }) => ({
+  currentUser: users[session.id]
+})
 
 const mapDispatchToProps = dispatch => ({
   fetchReview: (boatId, reviewId) => dispatch(fetchReview(boatId, reviewId))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(BoatReviewsIndex)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BoatReviewsIndex));

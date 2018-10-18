@@ -50,7 +50,6 @@ export const createReview = (boatId, review) => dispatch => {
 }
 
 export const updateReview = (review) => dispatch => {
-  debugger
   return (
     ReviewsApiUtil.updateReview(review).then(
       review => dispatch(receiveReview(review)),

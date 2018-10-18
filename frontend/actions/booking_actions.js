@@ -15,10 +15,12 @@ const receiveBooking = payload => ({
   payload
 })
 
-const receiveErrors = errors => ({
+const receiveErrors = errors => {
+  return ({
   type: RECEIVE_BOOKING_ERRORS,
   errors
-})
+});
+}
 
 export const fetchUsersBookings = () => dispatch => {
   return (

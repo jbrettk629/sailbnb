@@ -9,9 +9,9 @@ const NavBar = ({ currentUser, logout, openModal }) => {
           <Link to='/'><img id='logo' src='/assets/white_sailboat_logo'/></Link>
         </div>
         <div className="nav-links">
-          <button onClick={() => openModal('login')}>Log In</button>
+          <div className="nav-link-item"><button onClick={() => openModal('login')}>Log In</button></div>
           <br/>
-          <button onClick={() => openModal('signup')}>Sign Up</button>
+          <div className="nav-link-item"><button onClick={() => openModal('signup')}>Sign Up</button></div>
         </div>
     </div>
   )
@@ -22,8 +22,9 @@ const NavBar = ({ currentUser, logout, openModal }) => {
           <Link to='/'><img id='logo' src='/assets/white_sailboat_logo'/></Link>
         </div>
         <div className="nav-links">
-          <h3>Hi, {currentUser.name}</h3>
-          <button onClick={logout}>Logout</button>
+          <div className="nav-link-item"><h3>Hi, {currentUser.name}</h3></div>
+          <div className="nav-link-item"><Link to="/bookings">Trips</Link></div>
+          <div className="nav-link-item"><button onClick={logout}>Logout</button></div>
         </div>
   </div>
   )

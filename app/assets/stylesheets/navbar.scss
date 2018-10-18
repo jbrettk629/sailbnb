@@ -54,18 +54,6 @@ header {
   padding-right: 20px;
 }
 
-.nav-links > h3 {
-  padding-top: 31px;
-  padding-right: 10px;
-  color: white;
-}
-
-.other-nav-links > h3 {
-  padding-top: 31px;
-  padding-right: 10px;
-  color: red;
-}
-
 .other-nav-links {
   display: flex;
   justify-content: center;
@@ -73,38 +61,90 @@ header {
   padding-right: 20px;
 }
 
-.nav-links > button {
+.nav-link-item > h3 {
+  padding-top: 31px;
+  padding-right: 13px;
+  color: white;
+}
+
+.other-nav-link-item > h3 {
+  padding-top: 31px;
+  padding-right: 13px;
+  color: red;
+}
+
+
+.nav-link-items {
+  float: left;
+  height: 100%;
+}
+
+
+.nav-link-item > button {
   background: none;
   border: none;
   color: white;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
   height: 80px;
-  width: 80px;
+  width: 90px;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  vertical-align: center;
   font-size: 16px;
   align-content: center;
 }
+.nav-link-item > a {
+  position: relative;
+  top: 30.5px;
+  background: none;
+  border: none;
+  color: white;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+}
 
-.other-nav-links > button {
-  background: white;
+.other-nav-link-item > a {
+  position: relative;
+  top: 30.5px;
+  background: none;
   border: none;
   color: red;
   padding-top: 0px;
   padding-bottom: 0px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.other-nav-link-item > button {
+  background: none;
+  border: none;
+  color: red;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
   height: 80px;
-  width: 80px;
+  width: 90px;
   text-decoration: none;
   display: flex;
   justify-content: center;
-  vertical-align: center;
   font-size: 16px;
   align-content: center;
 }
