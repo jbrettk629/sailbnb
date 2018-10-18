@@ -1,6 +1,8 @@
 Boat.destroy_all
 Booking.destroy_all
 User.destroy_all
+Review.destroy_all
+
 user1 = User.create(name: 'Brett K.', email: 'brett@email', password: 'password')
 propic1 = File.open('app/assets/images/pro-pic-m1.jpeg')
 user1.photo.attach(io: propic1, filename: 'pro-pic-m1.jpeg')
