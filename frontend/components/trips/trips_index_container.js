@@ -3,6 +3,7 @@ import TripsIndex from './trips_index';
 import { fetchUsersBookings } from '../../actions/booking_actions';
 import { fetchReview, fetchReviews, createReview } from '../../actions/reviews_actions';
 import { fetchBoat } from '../../actions/boat_actions';
+import { openModal } from '../../actions/modal_actions';
 
 
 const mapStateToProps = state => ({
@@ -11,7 +12,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   createReview: (review) => dispatch(createReview(review)),
-  fetchUsersBookings: () => dispatch(fetchUsersBookings())
+  fetchUsersBookings: () => dispatch(fetchUsersBookings()),
+  openModal: (modal, data) => dispatch(openModal(modal, data)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TripsIndex);

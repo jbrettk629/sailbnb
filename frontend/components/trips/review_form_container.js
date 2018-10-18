@@ -4,9 +4,10 @@ import { closeModal } from '../../actions/modal_actions';
 import { createReview } from '../../actions/reviews_actions'
 
 const mapStateToProps = (state, ownProps) => {
+  debugger
   return ({
     errors: state.errors.reviews,
-    booking_des: ownProps.booking.booking_des,
+    booking_id: ownProps.data,
   });
 }
 

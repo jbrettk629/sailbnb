@@ -18,9 +18,10 @@ class TripsIndexItem extends React.Component {
         </div>
       );
 
+    const booking_id = this.props.booking.id
     const reviewForm = () => (
       <div>
-        <button className="review-button" onClick={() => openModal('review')}>Create a Review</button>
+        <button className="review-button" onClick={() => this.props.openModal('review', booking_id)}>Create a Review</button>
       </div>
     );
 

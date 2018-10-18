@@ -10,7 +10,7 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  switch(modal) {
+  switch(modal.modal) {
   case 'login':
     component = <LoginFormContainer />;
     break;
@@ -18,7 +18,7 @@ function Modal({modal, closeModal}) {
     component = <SignUpFormContainer />;
     break;
   case 'review':
-    component = <ReviewFormContainer />;
+    component = <ReviewFormContainer data={modal.data}/>;
     break;
   default:
     return null;
@@ -32,9 +32,11 @@ function Modal({modal, closeModal}) {
   );
 }
 
-const mapStateToProps = state => ({
-  modal: state.ui.modal,
-});
+const mapStateToProps = state => {
+  return({
+    modal: state.ui.modal,
+  });
+}
 
 const mapDispatchToProps = dispatch => ({
   closeModal: () => dispatch(closeModal()),

@@ -18,6 +18,7 @@ class TripsIndex extends React.Component {
         <TripsIndexItem
           key={booking.id}
           booking={booking}
+          openModal={this.props.openModal}
           createReview={this.props.createReview} />
       );
     });
