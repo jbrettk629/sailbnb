@@ -20,9 +20,17 @@ class TripsIndexItem extends React.Component {
 
     const reviewForm = () => (
       <div>
-        // <button onClick={() => openModal('login')}>Create a Review</button>
+        <button className="review-button" onClick={() => openModal('review')}>Create a Review</button>
       </div>
     );
+
+    const reviewChoice = () => {
+      if (this.props.booking.review_des === "add description here"){
+        return reviewForm();
+      } else {
+        return reviewInfo();
+      }
+    }
 
 
     return (
@@ -35,7 +43,7 @@ class TripsIndexItem extends React.Component {
           <div id="booking-dates">{this.props.booking.checkin} - {this.props.booking.checkout}</div>
           <div id="booking-location">{this.props.booking.boat_loc}</div>
         </div>
-        {reviewInfo()}
+        {reviewChoice()}
       </div>
     );
   }
