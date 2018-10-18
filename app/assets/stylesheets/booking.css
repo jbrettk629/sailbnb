@@ -17,13 +17,13 @@
 #booking-rate {
   font-size: 20px;
   font-weight: bold;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 #booking-per {
   font-size: 12px;
   font-weight: 400;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .booking-form {
@@ -42,7 +42,7 @@
 }
 
 .booking-form > label {
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;;
+  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 15px;
   font-weight: 550;
   margin-bottom: 5px;
@@ -71,14 +71,14 @@
   color: gray;
   padding-right: 2px;
   line-height: 33px;
-  float: left
+  float: left;
 }
 
 .guests > label {
   color: gray;
   padding-right: 2px;
   line-height: 33px;
-  float: left
+  float: left;
 }
 
 .guests > input {

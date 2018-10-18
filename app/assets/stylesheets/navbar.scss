@@ -28,6 +28,7 @@ header {
   height: 80px;
   width: 100%;
   z-index: 500;
+  border-bottom: 1px solid lightgray;
 }
 
 .logo {
@@ -70,7 +71,7 @@ header {
 .other-nav-link-item > h3 {
   padding-top: 31px;
   padding-right: 13px;
-  color: red;
+  color: rgb(72, 72, 72);
 }
 
 
@@ -119,7 +120,7 @@ header {
   top: 30.5px;
   background: none;
   border: none;
-  color: red;
+  color: rgb(72, 72, 72);
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 12px;
@@ -133,9 +134,10 @@ header {
 }
 
 .other-nav-link-item > button {
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
   background: none;
   border: none;
-  color: red;
+  color: rgb(72, 72, 72);
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 12px;

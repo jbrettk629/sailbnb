@@ -1,6 +1,7 @@
 .boat-index {
   float: left;
   width: 50%;
+  min-width: 600px;
 }
 
 .boat-show-link {
@@ -37,15 +38,18 @@
   float: left;
 }
 .boat-index-middle-info > h2 {
-  font-weight: 500;
+  font-weight: 625;
   font-size: 18px;
-  color: grey;
-  font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;;
-  line-height: 25px;
+  color: rgb(72, 72, 72);
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+  line-height: 26px;
   margin-top: 10px;
+  letter-spacing: normal;
+  white-space: normal;
 }
 
 .boat-index-middle-info > h3 {
+  color: rgb(72, 72, 72);
   font-weight: 500;
   font-size: 14px;
 }
@@ -61,19 +65,28 @@
 }
 
 .specifics {
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(72, 72, 72);
+  font-weight: normal;
 }
 
 .per-night {
   font-size: 12px;
-  font-weight: lighter;
+  line-height: 16px;
+  font-weight: 630;
   margin-left: 10px;
+  color: rgb(72, 72, 72);
 }
 
-.boat-index-price > .rate {
+.rate {
+  color: rgb(72, 72, 72);
   margin-top: 10px;
   margin-left: 10px;
   font-size: 18px;
+  line-height: 26px;
+  font-weight: 630;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
 .boat-rating {

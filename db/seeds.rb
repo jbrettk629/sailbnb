@@ -2,7 +2,7 @@ Boat.destroy_all
 Booking.destroy_all
 User.destroy_all
 
-boat1= Boat.create(owner_id: 1, title:'20ft Houseboat', location: 'San Francisco, CA', description: 'beautiful boat!!', rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 37.808302, lng: -122.422182)
+boat1= Boat.create(owner_id: 1, title:'45ft Island Schooner', location: 'Kalapana, Hawaii', description: 'Let the waves rock you to bed on this island schooner!!', rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 19.326423, lng: -155.020683)
 pic1 = File.open('app/assets/images/bay-beach-boat.jpg')
 boat1.photos.attach(io: pic1, filename: 'bay-beach-boat.jpg')
 pic2 = File.open('app/assets/images/inside-50ft.jpeg')
@@ -15,27 +15,27 @@ pic5 = File.open('app/assets/images/boat-deck-harbor.jpg')
 boat1.photos.attach(io: pic5, filename: 'boat-deck-harbor.jpg')
 
 
-boat2 = Boat.create(owner_id: 2, title:'20ft Houseboat', location: 'Princeton, CA', description: 'beautiful boat!!', rate: 250, guests: 6, bedrooms: 3, beds: 3, baths: 1, lat: 37.500052, lng: -122.488629)
+boat2 = Boat.create(owner_id: 2, title:'65ft Fully Outfitted Pirate Ship!', location: 'Princeton, CA', description: "You'll never be bored on this floating party pirate boat. Four decks of fun await!!", rate: 250, guests: 10, bedrooms: 4, beds: 6, baths: 2, lat: 37.500052, lng: -122.488629)
 pic6 = File.open('app/assets/images/bay-boat-daylight.jpg')
 boat2.photos.attach(io: pic6, filename: 'bay-boat-daylight.jpg')
 
-boat3 = Boat.create(owner_id: 1, title:'20ft Houseboat', location: 'Harbor Point, CA', description: 'beautiful boat!!', rate: 90, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 37.884576, lng: -122.500268)
+boat3 = Boat.create(owner_id: 1, title:'37ft Canal Houseboat', location: 'Harbor Point, CA', description: "Never be far from the fun! Fully furnished, and easy on/off dock access!", rate: 120, guests: 4, bedrooms: 1, beds: 22, baths: 1, lat: 37.884576, lng: -122.500268)
 pic7 = File.open('app/assets/images/houseboat1.jpg')
 boat3.photos.attach(io: pic7, filename: 'houseboat1.jpg')
 
-boat4 = Boat.create(owner_id: 3, title:'woeboat', location: 'San Francisco, CA', description: 'its crap!!', rate: 10, guests: 3, bedrooms: 0, beds: 0, baths: 0, lat: 37.779562, lng: -122.430257)
+boat4 = Boat.create(owner_id: 3, title:'50ft Ghost Pirate Ship', location: 'Bonita Cove, CA', description: "Ahoy mateys!! Forget the boring hotel, come fullfill a fantasy on my rustic pirate ship!", rate: 160, guests: 7, bedrooms: 4, beds: 6, baths: 0, lat: 37.825010, lng: -122.522428)
 pic8 = File.open('app/assets/images/pirateShip.jpg')
 boat4.photos.attach(io: pic8, filename:'pirateShip.jpg')
 
-boat5 = Boat.create(owner_id: 1, title:'20ft Motorboat', location: 'San Francisco, CA', description: 'beautiful boat!!', rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 38.808302, lng: -124.422182)
+boat5 = Boat.create(owner_id: 1, title:'800sqft Houseboat', location: 'San Francisco, CA', description: 'Docked right near downtown, with plenty of kayacks for your enjoyment!', rate: 150, guests: 3, bedrooms: 1, beds: 2, baths: 1, lat: 37.806438, lng: -122.442744)
 pic9 = File.open('app/assets/images/houseboat2.jpg')
 boat5.photos.attach(io: pic9, filename: 'houseboat2.jpg')
 
-boat6 =Boat.create(owner_id: 2, title:'28ft Sailboat', location: 'Princeton, CA', description: 'beautiful boat!!', rate: 250, guests: 6, bedrooms: 3, beds: 3, baths: 1, lat: 40.500052, lng: -123.488629)
+boat6 =Boat.create(owner_id: 2, title:'65ft Tri-Mast Yacht', location: 'Princeton, CA', description: 'Create memories on this replica of an 18th century schooner!!', rate: 250, guests: 6, bedrooms: 3, beds: 3, baths: 1, lat: 40.500052, lng: -123.488629)
 pic10 = File.open('app/assets/images/tri-mast-at-dusk.jpg')
 boat6.photos.attach(io: pic10, filename: 'tri-mast-at-dusk.jpg')
 
-boat7 =Boat.create(owner_id: 1, title:'30ft Houseboat', location: 'San Francisco, CA', description: 'beautiful boat!!', rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 24.808302, lng: -122.722182)
+boat7 =Boat.create(owner_id: 1, title:'40ft Comfortable Moored Sailboat', location: 'San Francisco, CA', description: "Nestled off Hunter's point. There is a shuttle servie from Hunter's Point Shipyard.", rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 37.722527, lng: -122.378293)
 pic11 = File.open('app/assets/images/birdseye-view-boat.jpg')
 boat7.photos.attach(io: pic11, filename: 'birdseye-view-boat')
 
@@ -62,8 +62,8 @@ Booking.create(boat_id: 2, user_id: 2, guests: 4, checkin: '20/12/2018', checkou
 Booking.create(boat_id: 2, user_id: 1, guests: 5, checkin: '01/02/2019', checkout: '05/02/2019')
 
 
-Review.create(booking_id: 1, author_name: "Brett", overall: 1.5, description: 'first booking', date: "June 2017")
-Review.create(booking_id: 2, author_name: "Brett", overall: 2.5, description: 'second booking', date: "August 2018")
-Review.create(booking_id: 3, overall: 3.5, author_name: "Nick", description: 'third booking', date: "April 2018")
-Review.create(booking_id: 4, overall: 4.5, author_name: "Nick", description: 'fourth booking', date: "September 2018")
-Review.create(booking_id: 5, overall: 5.0, author_name: "Brett", description: 'fifth booking', date: "September 2018")
+Review.create(booking_id: 1, author_name: "Brett", overall: 4.5, description: "We had the best time staying on Tim's boat for a few nights. He was always around to ferry us to land or back when we needed!", date: "June 2017")
+Review.create(booking_id: 2, author_name: "Brett", overall: 2.5, description: "Listening to the waves lap up against the boat at night under the stars was the most relaxing experience. I would highly recommend!", date: "August 2018")
+Review.create(booking_id: 3, overall: 3.5, author_name: "Nick", description: "The boat is beautful, but we found the space to be too cramped. Definitely wouldn't suggest staying here more than two nights.", date: "April 2018")
+Review.create(booking_id: 4, overall: 4.5, author_name: "Nick", description: 'Loved staying here! Stephanie recommended a great restaurant right on water to eat... and it was only a 10 minute drive into town!', date: "September 2018")
+Review.create(booking_id: 5, overall: 5.0, author_name: "Brett", description: "Worst experience ever. The PUMP toilet stopped worked and a mechanic could't get to it until monday. We went and found a hotel instead... ughh", date: "September 2018")

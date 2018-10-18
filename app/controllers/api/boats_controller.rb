@@ -25,7 +25,7 @@ class Api::BoatsController < ApplicationController
   private
 
   def boat_params
-    params.require(:boat).permit(:owner_id, :title, :description, :lat, :lng, :location, :rate, :guests, :bedrooms, :beds, :baths, :photos [])
+    params.require(:boat).permit(:owner_id, :title, :description, :lat, :lng, :location, :rate, :guests, :bedrooms, :beds, :baths, photos: [])
   end
 
 end

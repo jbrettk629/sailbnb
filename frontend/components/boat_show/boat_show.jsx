@@ -11,10 +11,6 @@ class BoatShow extends React.Component {
     this.props.fetchBoat(this.props.boatId);
   }
 
-  // componentWillReceiveProps(){
-  //   this.props.fetchBookings(this.props.boatId);
-  // }
-
 
   render(){
     if (this.props.boat === undefined) return '';

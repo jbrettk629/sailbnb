@@ -3,6 +3,7 @@
   margin-top: 18px;
   float: left;
   width: 50%;
+  min-width: 650px;
   height: 750px;
   position: sticky;
 }
