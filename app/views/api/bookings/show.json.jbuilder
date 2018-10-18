@@ -14,7 +14,9 @@ json.boat do
   @booking.boat do |boat|
     json.set! boat.id do
       json.extract! boat, :id, :owner_id, :title, :location
-      json.photoUrls boat.photos.map{ |file| url_for(file)}
+      if boat.photos.attachd?
+        json.photoUrls boat.photos.map{ |file| url_for(file)}
+      end
     end
   end
 end
