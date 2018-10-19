@@ -4,6 +4,7 @@
       json.review booking.review
       json.boat_loc booking.boat.location
       json.boat_title booking.boat.title
+      if booking.boat.photos.attached?
         json.boat_photos booking.boat.photos.map { |file| url_for(file)}
       end
     end
