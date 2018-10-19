@@ -59,3 +59,14 @@ class ReviewForm extends React.Component {
 }
 
 export default withRouter(ReviewForm);
+
+
+// <div className="review-rating">
+//   <ul className="rate-area" >
+//     <input type="radio" id="5-star" name="rating" value="5" />
+//     <input type="radio" id="5-star" name="rating" value="4" />
+//     <input type="radio" id="5-star" name="rating" value="3" />
+//     <input type="radio" id="5-star" name="rating" value="2" />
+//     <input type="radio" id="5-star" name="rating" value="1" />
+//   </ul>
+// </div>

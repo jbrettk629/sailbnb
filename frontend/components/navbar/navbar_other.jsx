@@ -6,7 +6,7 @@ const OtherNavBar = ({ currentUser, logout, openModal }) => {
   const sessionLinks = () => (
     <div className='other-navbar'>
         <div className='logo'>
-          <Link to='/'><img id='logo' src='/assets/red_sailboat_logo'/></Link>
+          <Link to='/'><img id='logo' src='https://s3-us-west-1.amazonaws.com/sailbnb-dev/red_sailboat_logo.png'/></Link>
         </div>
         <div className="other-nav-links">
           <div className="other-nav-link-item"><button onClick={() => openModal('login')}>Log In</button></div>
@@ -19,7 +19,7 @@ const OtherNavBar = ({ currentUser, logout, openModal }) => {
   const signedIn = () => (
     <div className='other-navbar'>
         <div className='logo'>
-          <Link to='/'><img id='logo' src='/assets/red_sailboat_logo'/></Link>
+          <Link to='/'><img id='logo' src='https://s3-us-west-1.amazonaws.com/sailbnb-dev/red_sailboat_logo.png'/></Link>
         </div>
         <div className="other-nav-links">
           <div className="other-nav-link-item"><h3>Hi, {currentUser.name}</h3></div>
