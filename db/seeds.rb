@@ -36,7 +36,7 @@ boat2 = Boat.create(owner_id: user2.id, title:'65ft Fully Outfitted Pirate Ship!
 pic6 = File.open('app/assets/images/bay-boat-daylight.jpg')
 boat2.photos.attach(io: pic6, filename: 'bay-boat-daylight.jpg')
 
-boat3 = Boat.create(owner_id: user1.id, title:'37ft Canal Houseboat', location: 'Harbor Point, CA', description: "Never be far from the fun! Fully furnished, and easy on/off dock access!", rate: 120, guests: 4, bedrooms: 1, beds: 22, baths: 1, lat: 37.884576, lng: -122.500268)
+boat3 = Boat.create(owner_id: user1.id, title:'37ft Canal Houseboat', location: 'Seattle, WA', description: "Never be far from the fun! Fully furnished, and easy on/off dock access!", rate: 120, guests: 4, bedrooms: 1, beds: 22, baths: 1, lat: 47.628148, lng: -122.333208)
 pic7 = File.open('app/assets/images/houseboat1.jpg')
 boat3.photos.attach(io: pic7, filename: 'houseboat1.jpg')
 
