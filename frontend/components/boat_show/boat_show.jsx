@@ -9,6 +9,7 @@ class BoatShow extends React.Component {
 
   componentDidMount(){
     this.props.fetchBoat(this.props.boatId);
+    this.props.fetchReviews(this.props.boatId);
   }
 
 

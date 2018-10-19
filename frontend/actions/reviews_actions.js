@@ -4,10 +4,12 @@ export const RECEIVE_ALL_REVIEWS = 'RECEIVE_ALL_REVIEWS';
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 
-const receiveAllReviews = (reviews) => ({
-  type: RECEIVE_ALL_REVIEWS,
-  reviews
-})
+const receiveAllReviews = (reviews) => {
+  return ({
+    type: RECEIVE_ALL_REVIEWS,
+    reviews
+  });
+}
 
 const receiveReview = (payload) => {
   return ({

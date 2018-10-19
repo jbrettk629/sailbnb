@@ -7,10 +7,17 @@
   font-style: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.profile-pic {
+.profile-pic-container {
   float: left;
   width:70px;
   height: 100%;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  margin-top: 10px;
+  border-radius: 22px;
 }
 
 .review-info {

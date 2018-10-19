@@ -4,20 +4,20 @@ User.destroy_all
 Review.destroy_all
 
 user1 = User.create(name: 'Brett K.', email: 'brett@email', password: 'password')
-propic1 = File.open('app/assets/images/pro-pic-m1.jpeg')
-user1.photo.attach(io: propic1, filename: 'pro-pic-m1.jpeg')
+propic1 = File.open('app/assets/images/pro-pic-m1.png')
+user1.photo.attach(io: propic1, filename: 'pro-pic-m1.png')
 
 user2 = User.create(name: 'Jerry M.', email: 'jerry@email', password: 'password')
-propic2 = File.open('app/assets/images/pro-pic-m2.jpeg')
-user2.photo.attach(io: propic2, filename: 'pro-pic-m2.jpeg')
+propic2 = File.open('app/assets/images/pro-pic-m2.png')
+user2.photo.attach(io: propic2, filename: 'pro-pic-m2.png')
 
 user3 = User.create(name: 'Michelle F.', email: 'michelle@email', password: 'password')
-propic3 = File.open('app/assets/images/pro-pic-g1.jpeg')
-user3.photo.attach(io: propic3, filename: 'pro-pic-g1.jpeg')
+propic3 = File.open('app/assets/images/pro-pic-f1.png')
+user3.photo.attach(io: propic3, filename: 'pro-pic-f1.png')
 
 user4 = User.create(name: 'Guest', email: 'guest@email', password: 'password')
-propic4 = File.open('app/assets/images/pro-pic-g2.jpeg')
-user4.photo.attach(io: propic4, filename: 'pro-pic-g2.jpeg')
+propic4 = File.open('app/assets/images/pro-pic-f2.png')
+user4.photo.attach(io: propic4, filename: 'pro-pic-f2.png')
 
 boat1= Boat.create(owner_id: user1.id, title:'45ft Island Schooner', location: 'Kalapana, Hawaii', description: 'Let the waves rock you to bed on this island schooner!!', rate: 150, guests: 3, bedrooms: 1, beds: 1, baths: 1, lat: 19.326423, lng: -155.020683)
 pic1 = File.open('app/assets/images/bay-beach-boat.jpg')
