@@ -39,7 +39,7 @@ class SplashPage extends React.Component {
         <div className="searchbar">
 
           <form onSubmit={this.handleSubmit}>
-            <img id='search-icon' src='/assets/searchicon' />
+            <img id='search-icon' src='https://s3-us-west-1.amazonaws.com/sailbnb-dev/searchicon.png' />
             <input id="search-input"
               autoComplete="off"
               type="text"
