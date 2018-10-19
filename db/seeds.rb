@@ -4,22 +4,22 @@ User.destroy_all
 Review.destroy_all
 
 user1 = User.create(name: 'Brett K.', email: 'brett@email', password: 'password')
-propic1 = EZDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-m2.png')
+propic1 = EzDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-m2.png')
 user1.photo.attach(io: propic1, filename: 'pro-pic-m2.png')
 user1.save!
 
 user2 = User.create(name: 'Jerry M.', email: 'jerry@email', password: 'password')
-propic2 = EZDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-m1.png')
+propic2 = EzDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-m1.png')
 user2.photo.attach(io: propic2, filename: 'pro-pic-m1.png')
 user2.save!
 
 user3 = User.create(name: 'Michelle F.', email: 'michelle@email', password: 'password')
-propic3 = EZDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-f1.png')
+propic3 = EzDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-f1.png')
 user3.photo.attach(io: propic3, filename: 'pro-pic-f1.png')
 user3.save
 
 user4 = User.create(name: 'Alexa', email: 'guest@email', password: 'password')
-propic4 = EZDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-f2.png')
+propic4 = EzDownload.open('https://s3-us-west-1.amazonaws.com/sailbnb-dev/pro-pic-f2.png')
 user4.photo.attach(io: propic4, filename: 'pro-pic-f2.png')
 user4.save!
 
